@@ -1,0 +1,510 @@
+﻿2026-10-10T18:50:12.5054021Z Current runner version: '2.337.0'
+2026-10-10T18:50:12.5074029Z ##[group]Runner Image Provisioner
+2026-10-10T18:50:12.5074603Z Hosted Compute Agent
+2026-10-10T18:50:12.5075095Z Version: 20261002.596
+2026-10-10T18:50:12.5075512Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-10T18:50:12.5075971Z Build Date: 2026-10-02T22:28:27Z
+2026-10-10T18:50:12.5076399Z Worker ID: {e608ba8c-886a-49b5-a63b-8b5f2cefb820}
+2026-10-10T18:50:12.5076823Z Region: centralus
+2026-10-10T18:50:12.5077201Z Cloud: Azure
+2026-10-10T18:50:12.5077559Z ##[endgroup]
+2026-10-10T18:50:12.5078395Z ##[group]Operating System
+2026-10-10T18:50:12.5078808Z Ubuntu
+2026-10-10T18:50:12.5079128Z 24.04.5
+2026-10-10T18:50:12.5079501Z LTS
+2026-10-10T18:50:12.5079846Z ##[endgroup]
+2026-10-10T18:50:12.5080299Z ##[group]Runner Image
+2026-10-10T18:50:12.5080705Z Image: ubuntu-24.04
+2026-10-10T18:50:12.5081049Z Version: 20261004.327.1
+2026-10-10T18:50:12.5081906Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-10T18:50:12.5082812Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-10T18:50:12.5083440Z ##[endgroup]
+2026-10-10T18:50:12.5084484Z ##[group]GITHUB_TOKEN Permissions
+2026-10-10T18:50:12.5085995Z Contents: read
+2026-10-10T18:50:12.5086339Z Metadata: read
+2026-10-10T18:50:12.5086736Z ##[endgroup]
+2026-10-10T18:50:12.5088139Z Secret source: Actions
+2026-10-10T18:50:12.5088720Z Cache mode: write
+2026-10-10T18:50:12.5089326Z Prepare workflow directory
+2026-10-10T18:50:12.5369126Z Prepare all required actions
+2026-10-10T18:50:12.5415736Z Getting action download info
+2026-10-10T18:50:12.7631097Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-10T18:50:12.8676211Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-10T18:50:13.0467695Z Complete job name: Package Build & Metadata Validation
+2026-10-10T18:50:13.0929764Z ##[group]Run actions/checkout@v4
+2026-10-10T18:50:13.0930572Z with:
+2026-10-10T18:50:13.0930823Z   repository: 0xRaiven/persistHunt
+2026-10-10T18:50:13.0933100Z   token: ***
+2026-10-10T18:50:13.0933330Z   ssh-strict: true
+2026-10-10T18:50:13.0933561Z   ssh-user: git
+2026-10-10T18:50:13.0933802Z   persist-credentials: true
+2026-10-10T18:50:13.0934059Z   clean: true
+2026-10-10T18:50:13.0934302Z   sparse-checkout-cone-mode: true
+2026-10-10T18:50:13.0934580Z   fetch-depth: 1
+2026-10-10T18:50:13.0934814Z   fetch-tags: false
+2026-10-10T18:50:13.0935050Z   show-progress: true
+2026-10-10T18:50:13.0935285Z   lfs: false
+2026-10-10T18:50:13.0935507Z   submodules: false
+2026-10-10T18:50:13.0935745Z   set-safe-directory: true
+2026-10-10T18:50:13.0936015Z   allow-unsafe-pr-checkout: false
+2026-10-10T18:50:13.0936365Z ##[endgroup]
+2026-10-10T18:50:13.1615943Z Syncing repository: 0xRaiven/persistHunt
+2026-10-10T18:50:13.1617480Z ##[group]Getting Git version info
+2026-10-10T18:50:13.1618018Z Working directory is '/home/runner/work/persistHunt/persistHunt'
+2026-10-10T18:50:13.1618819Z [command]/usr/bin/git version
+2026-10-10T18:50:13.1667341Z git version 2.55.0
+2026-10-10T18:50:13.1685841Z ##[endgroup]
+2026-10-10T18:50:13.1697414Z Temporarily overriding HOME='/home/runner/work/_temp/ee8ae54a-7cba-42bd-8ab5-919e2ded8989' before making global git config changes
+2026-10-10T18:50:13.1698720Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-10T18:50:13.1701593Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/persistHunt/persistHunt
+2026-10-10T18:50:13.1746622Z Deleting the contents of '/home/runner/work/persistHunt/persistHunt'
+2026-10-10T18:50:13.1751478Z ##[group]Initializing the repository
+2026-10-10T18:50:13.1755062Z [command]/usr/bin/git init /home/runner/work/persistHunt/persistHunt
+2026-10-10T18:50:13.1826040Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-10T18:50:13.1827243Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-10T18:50:13.1829471Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-10T18:50:13.1830804Z hint: call:
+2026-10-10T18:50:13.1831136Z hint:
+2026-10-10T18:50:13.1831554Z hint: 	git config --global init.defaultBranch <name>
+2026-10-10T18:50:13.1832012Z hint:
+2026-10-10T18:50:13.1832450Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-10T18:50:13.1833079Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-10T18:50:13.1833592Z hint:
+2026-10-10T18:50:13.1833923Z hint: 	git branch -m <name>
+2026-10-10T18:50:13.1834296Z hint:
+2026-10-10T18:50:13.1834774Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-10T18:50:13.1835864Z Initialized empty Git repository in /home/runner/work/persistHunt/persistHunt/.git/
+2026-10-10T18:50:13.1837486Z [command]/usr/bin/git remote add origin https://github.com/0xRaiven/persistHunt
+2026-10-10T18:50:13.1880293Z ##[endgroup]
+2026-10-10T18:50:13.1881558Z ##[group]Disabling automatic garbage collection
+2026-10-10T18:50:13.1884506Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-10T18:50:13.1915172Z ##[endgroup]
+2026-10-10T18:50:13.1915976Z ##[group]Setting up auth
+2026-10-10T18:50:13.1920549Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-10T18:50:13.1957683Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-10T18:50:13.2599269Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-10T18:50:13.2626609Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-10T18:50:13.2796626Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-10T18:50:13.2825683Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-10T18:50:13.2992291Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-10T18:50:13.3024375Z ##[endgroup]
+2026-10-10T18:50:13.3024926Z ##[group]Fetching the repository
+2026-10-10T18:50:13.3030488Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +38ec3ef6d3242dfd0f13317fb84c335d5950b7e2:refs/remotes/origin/main
+2026-10-10T18:50:13.6827067Z From https://github.com/0xRaiven/persistHunt
+2026-10-10T18:50:13.6827730Z  * [new ref]         38ec3ef6d3242dfd0f13317fb84c335d5950b7e2 -> origin/main
+2026-10-10T18:50:13.6831527Z ##[endgroup]
+2026-10-10T18:50:13.6832377Z ##[group]Determining the checkout info
+2026-10-10T18:50:13.6833507Z ##[endgroup]
+2026-10-10T18:50:13.6838120Z [command]/usr/bin/git sparse-checkout disable
+2026-10-10T18:50:13.7141578Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-10T18:50:13.7244628Z ##[group]Checking out the ref
+2026-10-10T18:50:13.7254750Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-10T18:50:13.7741654Z Switched to a new branch 'main'
+2026-10-10T18:50:13.7742597Z branch 'main' set up to track 'origin/main'.
+2026-10-10T18:50:13.7744444Z ##[endgroup]
+2026-10-10T18:50:13.7952462Z [command]/usr/bin/git log -1 --format=%H
+2026-10-10T18:50:13.7978741Z 38ec3ef6d3242dfd0f13317fb84c335d5950b7e2
+2026-10-10T18:50:13.8274638Z ##[group]Run actions/setup-python@v5
+2026-10-10T18:50:13.8275019Z with:
+2026-10-10T18:50:13.8275270Z   python-version: 3.11
+2026-10-10T18:50:13.8275541Z   check-latest: false
+2026-10-10T18:50:13.8277831Z   token: ***
+2026-10-10T18:50:13.8278092Z   update-environment: true
+2026-10-10T18:50:13.8278384Z   allow-prereleases: false
+2026-10-10T18:50:13.8278823Z   freethreaded: false
+2026-10-10T18:50:13.8279092Z ##[endgroup]
+2026-10-10T18:50:13.9150987Z ##[group]Installed versions
+2026-10-10T18:50:13.9211016Z (node:2075) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-10T18:50:13.9212145Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-10T18:50:13.9212592Z Successfully set up CPython (3.11.17)
+2026-10-10T18:50:13.9213241Z ##[endgroup]
+2026-10-10T18:50:14.0063994Z ##[group]Run python -m pip install --upgrade pip
+2026-10-10T18:50:14.0064548Z [36;1mpython -m pip install --upgrade pip[0m
+2026-10-10T18:50:14.0064940Z [36;1mpip install build twine[0m
+2026-10-10T18:50:14.0381950Z shell: /usr/bin/bash -e {0}
+2026-10-10T18:50:14.0382350Z env:
+2026-10-10T18:50:14.0382674Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:14.0383152Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-10T18:50:14.0383611Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:14.0384061Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:14.0384487Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:14.0384910Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-10T18:50:14.0385276Z ##[endgroup]
+2026-10-10T18:50:15.0184264Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages (26.2.1)
+2026-10-10T18:50:15.8101328Z Collecting build
+2026-10-10T18:50:15.9298958Z   Downloading build-1.6.1-py3-none-any.whl.metadata (5.6 kB)
+2026-10-10T18:50:16.3090712Z Collecting twine
+2026-10-10T18:50:16.3226186Z   Downloading twine-7.0.0-py3-none-any.whl.metadata (3.5 kB)
+2026-10-10T18:50:16.4187420Z Collecting packaging>=24.0 (from build)
+2026-10-10T18:50:16.4325100Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-10T18:50:16.5168798Z Collecting pyproject_hooks (from build)
+2026-10-10T18:50:16.5301305Z   Downloading pyproject_hooks-1.3.3-py3-none-any.whl.metadata (1.3 kB)
+2026-10-10T18:50:16.5990314Z Collecting readme-renderer>=35.0 (from twine)
+2026-10-10T18:50:16.6124807Z   Downloading readme_renderer-46.0-py3-none-any.whl.metadata (3.0 kB)
+2026-10-10T18:50:16.6709138Z Collecting requests>=2.20 (from twine)
+2026-10-10T18:50:16.6839030Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-10-10T18:50:16.9279613Z Collecting requests-toolbelt!=0.9.0,>=0.8.0 (from twine)
+2026-10-10T18:50:16.9416225Z   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+2026-10-10T18:50:17.3550310Z Collecting urllib3>=1.26.0 (from twine)
+2026-10-10T18:50:17.3685564Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-10T18:50:17.3988766Z Collecting keyring>=21.2.0 (from twine)
+2026-10-10T18:50:17.4119811Z   Downloading keyring-25.7.0-py3-none-any.whl.metadata (21 kB)
+2026-10-10T18:50:17.4358440Z Collecting rfc3986>=1.4.0 (from twine)
+2026-10-10T18:50:17.4491861Z   Downloading rfc3986-2.0.0-py2.py3-none-any.whl.metadata (6.6 kB)
+2026-10-10T18:50:17.4862902Z Collecting rich>=14.3.3 (from twine)
+2026-10-10T18:50:17.4997053Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+2026-10-10T18:50:17.5431819Z Collecting id (from twine)
+2026-10-10T18:50:17.5563260Z   Downloading id-1.6.1-py3-none-any.whl.metadata (5.1 kB)
+2026-10-10T18:50:17.5818662Z Collecting SecretStorage>=3.2 (from keyring>=21.2.0->twine)
+2026-10-10T18:50:17.5953765Z   Downloading secretstorage-3.5.0-py3-none-any.whl.metadata (4.0 kB)
+2026-10-10T18:50:17.6165440Z Collecting jeepney>=0.4.2 (from keyring>=21.2.0->twine)
+2026-10-10T18:50:17.6298211Z   Downloading jeepney-0.9.0-py3-none-any.whl.metadata (1.2 kB)
+2026-10-10T18:50:17.6571289Z Collecting importlib_metadata>=4.11.4 (from keyring>=21.2.0->twine)
+2026-10-10T18:50:17.6703605Z   Downloading importlib_metadata-9.0.1-py3-none-any.whl.metadata (4.5 kB)
+2026-10-10T18:50:17.6930965Z Collecting jaraco.classes (from keyring>=21.2.0->twine)
+2026-10-10T18:50:17.7067260Z   Downloading jaraco.classes-3.4.0-py3-none-any.whl.metadata (2.6 kB)
+2026-10-10T18:50:17.7312530Z Collecting jaraco.functools (from keyring>=21.2.0->twine)
+2026-10-10T18:50:17.7449706Z   Downloading jaraco_functools-4.6.0-py3-none-any.whl.metadata (2.9 kB)
+2026-10-10T18:50:17.7670929Z Collecting jaraco.context (from keyring>=21.2.0->twine)
+2026-10-10T18:50:17.7805968Z   Downloading jaraco_context-6.1.2-py3-none-any.whl.metadata (4.2 kB)
+2026-10-10T18:50:17.8198585Z Collecting zipp>=3.20 (from importlib_metadata>=4.11.4->keyring>=21.2.0->twine)
+2026-10-10T18:50:17.8331748Z   Downloading zipp-4.1.1-py3-none-any.whl.metadata (3.6 kB)
+2026-10-10T18:50:17.8711115Z Collecting nh3>=0.2.14 (from readme-renderer>=35.0->twine)
+2026-10-10T18:50:17.8844315Z   Downloading nh3-0.3.7-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.0 kB)
+2026-10-10T18:50:17.9070310Z Collecting docutils>=0.21.2 (from readme-renderer>=35.0->twine)
+2026-10-10T18:50:17.9203391Z   Downloading docutils-0.23-py3-none-any.whl.metadata (15 kB)
+2026-10-10T18:50:17.9464448Z Collecting Pygments>=2.5.1 (from readme-renderer>=35.0->twine)
+2026-10-10T18:50:17.9597781Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-10T18:50:18.0600424Z Collecting charset_normalizer<4,>=2 (from requests>=2.20->twine)
+2026-10-10T18:50:18.0735862Z   Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+2026-10-10T18:50:18.1125994Z Collecting idna<4,>=2.5 (from requests>=2.20->twine)
+2026-10-10T18:50:18.1261766Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-10-10T18:50:18.1513147Z Collecting certifi>=2023.5.7 (from requests>=2.20->twine)
+2026-10-10T18:50:18.1645643Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+2026-10-10T18:50:18.1900486Z Collecting markdown-it-py>=2.2.0 (from rich>=14.3.3->twine)
+2026-10-10T18:50:18.2033888Z   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-10T18:50:18.2261798Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=14.3.3->twine)
+2026-10-10T18:50:18.2392975Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-10-10T18:50:18.3795176Z Collecting cryptography>=2.0 (from SecretStorage>=3.2->keyring>=21.2.0->twine)
+2026-10-10T18:50:18.3929073Z   Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+2026-10-10T18:50:18.4675139Z Collecting cffi>=2.0.0 (from cryptography>=2.0->SecretStorage>=3.2->keyring>=21.2.0->twine)
+2026-10-10T18:50:18.4807983Z   Downloading cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+2026-10-10T18:50:18.5050930Z Collecting pycparser (from cffi>=2.0.0->cryptography>=2.0->SecretStorage>=3.2->keyring>=21.2.0->twine)
+2026-10-10T18:50:18.5180501Z   Downloading pycparser-3.11-py3-none-any.whl.metadata (8.2 kB)
+2026-10-10T18:50:18.5429922Z Collecting more-itertools (from jaraco.classes->keyring>=21.2.0->twine)
+2026-10-10T18:50:18.5563438Z   Downloading more_itertools-11.1.0-py3-none-any.whl.metadata (41 kB)
+2026-10-10T18:50:18.5780889Z Collecting backports.tarfile (from jaraco.context->keyring>=21.2.0->twine)
+2026-10-10T18:50:18.5911194Z   Downloading backports.tarfile-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+2026-10-10T18:50:18.6080291Z Downloading build-1.6.1-py3-none-any.whl (31 kB)
+2026-10-10T18:50:18.6227307Z Downloading twine-7.0.0-py3-none-any.whl (43 kB)
+2026-10-10T18:50:18.6385496Z Downloading keyring-25.7.0-py3-none-any.whl (39 kB)
+2026-10-10T18:50:18.6535297Z Downloading importlib_metadata-9.0.1-py3-none-any.whl (27 kB)
+2026-10-10T18:50:18.6680670Z Downloading jeepney-0.9.0-py3-none-any.whl (49 kB)
+2026-10-10T18:50:18.6849137Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-10T18:50:18.7129107Z Downloading readme_renderer-46.0-py3-none-any.whl (14 kB)
+2026-10-10T18:50:18.7275189Z Downloading docutils-0.23-py3-none-any.whl (634 kB)
+2026-10-10T18:50:18.7587716Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 634.7/634.7 kB 23.0 MB/s  0:00:00
+2026-10-10T18:50:18.7724370Z Downloading nh3-0.3.7-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (832 kB)
+2026-10-10T18:50:18.7895749Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 832.2/832.2 kB 39.1 MB/s  0:00:00
+2026-10-10T18:50:18.8030591Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-10T18:50:18.8200908Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 65.0 MB/s  0:00:00
+2026-10-10T18:50:18.8333881Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-10-10T18:50:18.8487005Z Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (269 kB)
+2026-10-10T18:50:18.8635453Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-10-10T18:50:18.8782424Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+2026-10-10T18:50:18.8932759Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+2026-10-10T18:50:18.9086166Z Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+2026-10-10T18:50:18.9237359Z Downloading rfc3986-2.0.0-py2.py3-none-any.whl (31 kB)
+2026-10-10T18:50:18.9406708Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+2026-10-10T18:50:19.1328593Z Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-10-10T18:50:19.1476191Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-10-10T18:50:19.1618248Z Downloading secretstorage-3.5.0-py3-none-any.whl (15 kB)
+2026-10-10T18:50:19.1762248Z Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+2026-10-10T18:50:19.2209545Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 105.2 MB/s  0:00:00
+2026-10-10T18:50:19.2343042Z Downloading cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (217 kB)
+2026-10-10T18:50:19.2495440Z Downloading zipp-4.1.1-py3-none-any.whl (10 kB)
+2026-10-10T18:50:19.2637973Z Downloading id-1.6.1-py3-none-any.whl (14 kB)
+2026-10-10T18:50:19.2782886Z Downloading jaraco.classes-3.4.0-py3-none-any.whl (6.8 kB)
+2026-10-10T18:50:19.2926626Z Downloading jaraco_context-6.1.2-py3-none-any.whl (7.9 kB)
+2026-10-10T18:50:19.3076219Z Downloading backports.tarfile-1.2.0-py3-none-any.whl (30 kB)
+2026-10-10T18:50:19.3220249Z Downloading jaraco_functools-4.6.0-py3-none-any.whl (11 kB)
+2026-10-10T18:50:19.3365958Z Downloading more_itertools-11.1.0-py3-none-any.whl (72 kB)
+2026-10-10T18:50:19.3514406Z Downloading pycparser-3.11-py3-none-any.whl (51 kB)
+2026-10-10T18:50:19.3664307Z Downloading pyproject_hooks-1.3.3-py3-none-any.whl (10 kB)
+2026-10-10T18:50:19.4367995Z Installing collected packages: zipp, urllib3, rfc3986, pyproject_hooks, Pygments, pycparser, packaging, nh3, more-itertools, mdurl, jeepney, idna, docutils, charset_normalizer, certifi, backports.tarfile, requests, readme-renderer, markdown-it-py, jaraco.functools, jaraco.context, jaraco.classes, importlib_metadata, id, cffi, build, rich, requests-toolbelt, cryptography, SecretStorage, keyring, twine
+2026-10-10T18:50:20.7419600Z 
+2026-10-10T18:50:20.7432323Z Successfully installed Pygments-2.21.0 SecretStorage-3.5.0 backports.tarfile-1.2.0 build-1.6.1 certifi-2026.7.22 cffi-2.1.1 charset_normalizer-3.5.2 cryptography-50.0.2 docutils-0.23 id-1.6.1 idna-3.20 importlib_metadata-9.0.1 jaraco.classes-3.4.0 jaraco.context-6.1.2 jaraco.functools-4.6.0 jeepney-0.9.0 keyring-25.7.0 markdown-it-py-4.2.0 mdurl-0.1.2 more-itertools-11.1.0 nh3-0.3.7 packaging-26.3 pycparser-3.11 pyproject_hooks-1.3.3 readme-renderer-46.0 requests-2.34.2 requests-toolbelt-1.0.0 rfc3986-2.0.0 rich-15.0.0 twine-7.0.0 urllib3-2.8.0 zipp-4.1.1
+2026-10-10T18:50:20.8687262Z ##[group]Run python -m build
+2026-10-10T18:50:20.8687551Z [36;1mpython -m build[0m
+2026-10-10T18:50:20.8741539Z shell: /usr/bin/bash -e {0}
+2026-10-10T18:50:20.8741680Z env:
+2026-10-10T18:50:20.8741838Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:20.8742070Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-10T18:50:20.8742294Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:20.8742496Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:20.8742871Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:20.8743074Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-10T18:50:20.8743245Z ##[endgroup]
+2026-10-10T18:50:20.9960946Z * Creating isolated environment: venv+pip...
+2026-10-10T18:50:21.0277304Z * Installing packages in isolated environment:
+2026-10-10T18:50:21.0277894Z   - setuptools>=61.0.0
+2026-10-10T18:50:21.0278183Z   - wheel
+2026-10-10T18:50:21.7403250Z * Getting build dependencies for sdist...
+2026-10-10T18:50:22.1665739Z running egg_info
+2026-10-10T18:50:22.1672646Z creating persisthunt.egg-info
+2026-10-10T18:50:22.1673442Z writing persisthunt.egg-info/PKG-INFO
+2026-10-10T18:50:22.1678577Z writing dependency_links to persisthunt.egg-info/dependency_links.txt
+2026-10-10T18:50:22.1679584Z writing entry points to persisthunt.egg-info/entry_points.txt
+2026-10-10T18:50:22.1682387Z writing requirements to persisthunt.egg-info/requires.txt
+2026-10-10T18:50:22.1682853Z writing top-level names to persisthunt.egg-info/top_level.txt
+2026-10-10T18:50:22.1684195Z writing manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:22.1705786Z reading manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:22.1707013Z adding license file 'LICENSE'
+2026-10-10T18:50:22.1712514Z writing manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:22.2040210Z WARNING `project.license` as a TOML table is deprecated
+2026-10-10T18:50:22.2040567Z !!
+2026-10-10T18:50:22.2040627Z 
+2026-10-10T18:50:22.2040711Z         ********************************************************************************
+2026-10-10T18:50:22.2041125Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+2026-10-10T18:50:22.2041443Z 
+2026-10-10T18:50:22.2041554Z         By 2027-Feb-18, you need to update your project and remove deprecated calls
+2026-10-10T18:50:22.2041789Z         or your builds will no longer be supported.
+2026-10-10T18:50:22.2041902Z 
+2026-10-10T18:50:22.2042106Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-10-10T18:50:22.2042381Z         ********************************************************************************
+2026-10-10T18:50:22.2042500Z 
+2026-10-10T18:50:22.2042541Z !!
+2026-10-10T18:50:22.2042719Z WARNING `extras_require` overwritten in `pyproject.toml` (optional-dependencies)
+2026-10-10T18:50:22.2051236Z * Installed build dependency versions:
+2026-10-10T18:50:22.2051466Z   - setuptools==84.0.0
+2026-10-10T18:50:22.2051648Z   - wheel==0.48.0
+2026-10-10T18:50:22.2051813Z * Building sdist...
+2026-10-10T18:50:22.2998328Z running sdist
+2026-10-10T18:50:22.2998796Z running egg_info
+2026-10-10T18:50:22.3009419Z writing persisthunt.egg-info/PKG-INFO
+2026-10-10T18:50:22.3015128Z writing dependency_links to persisthunt.egg-info/dependency_links.txt
+2026-10-10T18:50:22.3016743Z writing entry points to persisthunt.egg-info/entry_points.txt
+2026-10-10T18:50:22.3019199Z writing requirements to persisthunt.egg-info/requires.txt
+2026-10-10T18:50:22.3019917Z writing top-level names to persisthunt.egg-info/top_level.txt
+2026-10-10T18:50:22.3040794Z reading manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:22.3044388Z adding license file 'LICENSE'
+2026-10-10T18:50:22.3049873Z writing manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:22.3083988Z running check
+2026-10-10T18:50:22.3101160Z creating persisthunt-0.1.0
+2026-10-10T18:50:22.3103011Z creating persisthunt-0.1.0/persisthunt
+2026-10-10T18:50:22.3109394Z creating persisthunt-0.1.0/persisthunt.egg-info
+2026-10-10T18:50:22.3115199Z creating persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3118546Z creating persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3118789Z copying files to persisthunt-0.1.0...
+2026-10-10T18:50:22.3119023Z copying LICENSE -> persisthunt-0.1.0
+2026-10-10T18:50:22.3119517Z copying README.md -> persisthunt-0.1.0
+2026-10-10T18:50:22.3119764Z copying pyproject.toml -> persisthunt-0.1.0
+2026-10-10T18:50:22.3120697Z copying setup.py -> persisthunt-0.1.0
+2026-10-10T18:50:22.3124274Z copying persisthunt/__init__.py -> persisthunt-0.1.0/persisthunt
+2026-10-10T18:50:22.3124920Z copying persisthunt/__main__.py -> persisthunt-0.1.0/persisthunt
+2026-10-10T18:50:22.3125462Z copying persisthunt/cli.py -> persisthunt-0.1.0/persisthunt
+2026-10-10T18:50:22.3126442Z copying persisthunt/findings.py -> persisthunt-0.1.0/persisthunt
+2026-10-10T18:50:22.3127196Z copying persisthunt/reporting.py -> persisthunt-0.1.0/persisthunt
+2026-10-10T18:50:22.3128025Z copying persisthunt/risk.py -> persisthunt-0.1.0/persisthunt
+2026-10-10T18:50:22.3134235Z copying persisthunt.egg-info/PKG-INFO -> persisthunt-0.1.0/persisthunt.egg-info
+2026-10-10T18:50:22.3140618Z copying persisthunt.egg-info/SOURCES.txt -> persisthunt-0.1.0/persisthunt.egg-info
+2026-10-10T18:50:22.3144922Z copying persisthunt.egg-info/dependency_links.txt -> persisthunt-0.1.0/persisthunt.egg-info
+2026-10-10T18:50:22.3145939Z copying persisthunt.egg-info/entry_points.txt -> persisthunt-0.1.0/persisthunt.egg-info
+2026-10-10T18:50:22.3150238Z copying persisthunt.egg-info/requires.txt -> persisthunt-0.1.0/persisthunt.egg-info
+2026-10-10T18:50:22.3150773Z copying persisthunt.egg-info/top_level.txt -> persisthunt-0.1.0/persisthunt.egg-info
+2026-10-10T18:50:22.3151278Z copying persisthunt/detectors/__init__.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3151849Z copying persisthunt/detectors/account.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3152393Z copying persisthunt/detectors/base.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3152899Z copying persisthunt/detectors/cron.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3153692Z copying persisthunt/detectors/process.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3154598Z copying persisthunt/detectors/shell.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3155488Z copying persisthunt/detectors/ssh.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3156408Z copying persisthunt/detectors/suid.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3157257Z copying persisthunt/detectors/systemd.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3158122Z copying tests/test_account_detector.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3158985Z copying tests/test_cli.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3159801Z copying tests/test_cron_detector.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3160834Z copying tests/test_detectors.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3161595Z copying tests/test_findings.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3162424Z copying tests/test_process_detector.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3163268Z copying tests/test_reporting.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3164063Z copying tests/test_risk_scoring.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3164865Z copying tests/test_safety_and_hardening.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3165705Z copying tests/test_shell_detector.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3166558Z copying tests/test_ssh_detector.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3167351Z copying tests/test_suid_detector.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3168287Z copying tests/test_systemd_detector.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3174923Z Writing persisthunt-0.1.0/setup.cfg
+2026-10-10T18:50:22.3176111Z Creating tar archive
+2026-10-10T18:50:22.3420868Z removing 'persisthunt-0.1.0' (and everything under it)
+2026-10-10T18:50:22.4043610Z WARNING `project.license` as a TOML table is deprecated
+2026-10-10T18:50:22.4045680Z !!
+2026-10-10T18:50:22.4045763Z 
+2026-10-10T18:50:22.4045874Z         ********************************************************************************
+2026-10-10T18:50:22.4046658Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+2026-10-10T18:50:22.4046990Z 
+2026-10-10T18:50:22.4047106Z         By 2027-Feb-18, you need to update your project and remove deprecated calls
+2026-10-10T18:50:22.4047335Z         or your builds will no longer be supported.
+2026-10-10T18:50:22.4047446Z 
+2026-10-10T18:50:22.4049320Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-10-10T18:50:22.4049701Z         ********************************************************************************
+2026-10-10T18:50:22.4049822Z 
+2026-10-10T18:50:22.4049867Z !!
+2026-10-10T18:50:22.4050199Z WARNING `extras_require` overwritten in `pyproject.toml` (optional-dependencies)
+2026-10-10T18:50:22.4357004Z * Building wheel from sdist
+2026-10-10T18:50:22.4389014Z * Creating isolated environment: venv+pip...
+2026-10-10T18:50:22.4402041Z * Installing packages in isolated environment:
+2026-10-10T18:50:22.4402351Z   - setuptools>=61.0.0
+2026-10-10T18:50:22.4402531Z   - wheel
+2026-10-10T18:50:22.9662719Z * Getting build dependencies for wheel...
+2026-10-10T18:50:23.2232291Z running egg_info
+2026-10-10T18:50:23.2239090Z writing persisthunt.egg-info/PKG-INFO
+2026-10-10T18:50:23.2244048Z writing dependency_links to persisthunt.egg-info/dependency_links.txt
+2026-10-10T18:50:23.2245279Z writing entry points to persisthunt.egg-info/entry_points.txt
+2026-10-10T18:50:23.2247611Z writing requirements to persisthunt.egg-info/requires.txt
+2026-10-10T18:50:23.2248224Z writing top-level names to persisthunt.egg-info/top_level.txt
+2026-10-10T18:50:23.2268452Z reading manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:23.2272152Z adding license file 'LICENSE'
+2026-10-10T18:50:23.2277689Z writing manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:23.2483288Z WARNING `project.license` as a TOML table is deprecated
+2026-10-10T18:50:23.2483600Z !!
+2026-10-10T18:50:23.2483666Z 
+2026-10-10T18:50:23.2483744Z         ********************************************************************************
+2026-10-10T18:50:23.2484151Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+2026-10-10T18:50:23.2484461Z 
+2026-10-10T18:50:23.2484587Z         By 2027-Feb-18, you need to update your project and remove deprecated calls
+2026-10-10T18:50:23.2484810Z         or your builds will no longer be supported.
+2026-10-10T18:50:23.2484915Z 
+2026-10-10T18:50:23.2485115Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-10-10T18:50:23.2485449Z         ********************************************************************************
+2026-10-10T18:50:23.2485569Z 
+2026-10-10T18:50:23.2485609Z !!
+2026-10-10T18:50:23.2485785Z WARNING `extras_require` overwritten in `pyproject.toml` (optional-dependencies)
+2026-10-10T18:50:23.2493487Z * Installed build dependency versions:
+2026-10-10T18:50:23.2493712Z   - setuptools==84.0.0
+2026-10-10T18:50:23.2493893Z   - wheel==0.48.0
+2026-10-10T18:50:23.2494051Z * Building wheel...
+2026-10-10T18:50:23.3328313Z running bdist_wheel
+2026-10-10T18:50:23.3349445Z running build
+2026-10-10T18:50:23.3349662Z running build_py
+2026-10-10T18:50:23.3356520Z creating build/lib/persisthunt
+2026-10-10T18:50:23.3358692Z copying persisthunt/cli.py -> build/lib/persisthunt
+2026-10-10T18:50:23.3360240Z copying persisthunt/__main__.py -> build/lib/persisthunt
+2026-10-10T18:50:23.3361429Z copying persisthunt/findings.py -> build/lib/persisthunt
+2026-10-10T18:50:23.3362804Z copying persisthunt/reporting.py -> build/lib/persisthunt
+2026-10-10T18:50:23.3364016Z copying persisthunt/risk.py -> build/lib/persisthunt
+2026-10-10T18:50:23.3365099Z copying persisthunt/__init__.py -> build/lib/persisthunt
+2026-10-10T18:50:23.3367193Z creating build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3367940Z copying persisthunt/detectors/suid.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3369454Z copying persisthunt/detectors/cron.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3370723Z copying persisthunt/detectors/ssh.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3372039Z copying persisthunt/detectors/shell.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3373104Z copying persisthunt/detectors/process.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3374163Z copying persisthunt/detectors/account.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3375215Z copying persisthunt/detectors/systemd.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3376353Z copying persisthunt/detectors/__init__.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3377298Z copying persisthunt/detectors/base.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3377975Z running egg_info
+2026-10-10T18:50:23.3383302Z writing persisthunt.egg-info/PKG-INFO
+2026-10-10T18:50:23.3389300Z writing dependency_links to persisthunt.egg-info/dependency_links.txt
+2026-10-10T18:50:23.3391756Z writing entry points to persisthunt.egg-info/entry_points.txt
+2026-10-10T18:50:23.3395041Z writing requirements to persisthunt.egg-info/requires.txt
+2026-10-10T18:50:23.3396947Z writing top-level names to persisthunt.egg-info/top_level.txt
+2026-10-10T18:50:23.3408937Z reading manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:23.3412418Z adding license file 'LICENSE'
+2026-10-10T18:50:23.3417837Z writing manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:23.3431608Z installing to build/bdist.linux-x86_64/wheel
+2026-10-10T18:50:23.3431876Z running install
+2026-10-10T18:50:23.3460945Z running install_lib
+2026-10-10T18:50:23.3466146Z creating build/bdist.linux-x86_64/wheel
+2026-10-10T18:50:23.3467861Z creating build/bdist.linux-x86_64/wheel/persisthunt
+2026-10-10T18:50:23.3468639Z copying build/lib/persisthunt/cli.py -> build/bdist.linux-x86_64/wheel/./persisthunt
+2026-10-10T18:50:23.3469842Z copying build/lib/persisthunt/__main__.py -> build/bdist.linux-x86_64/wheel/./persisthunt
+2026-10-10T18:50:23.3480639Z copying build/lib/persisthunt/findings.py -> build/bdist.linux-x86_64/wheel/./persisthunt
+2026-10-10T18:50:23.3490868Z copying build/lib/persisthunt/reporting.py -> build/bdist.linux-x86_64/wheel/./persisthunt
+2026-10-10T18:50:23.3491324Z creating build/bdist.linux-x86_64/wheel/persisthunt/detectors
+2026-10-10T18:50:23.3491674Z copying build/lib/persisthunt/detectors/suid.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3492034Z copying build/lib/persisthunt/detectors/cron.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3492382Z copying build/lib/persisthunt/detectors/ssh.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3492732Z copying build/lib/persisthunt/detectors/shell.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3493098Z copying build/lib/persisthunt/detectors/process.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3493459Z copying build/lib/persisthunt/detectors/account.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3493821Z copying build/lib/persisthunt/detectors/systemd.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3494353Z copying build/lib/persisthunt/detectors/__init__.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3494714Z copying build/lib/persisthunt/detectors/base.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3495034Z copying build/lib/persisthunt/risk.py -> build/bdist.linux-x86_64/wheel/./persisthunt
+2026-10-10T18:50:23.3495328Z copying build/lib/persisthunt/__init__.py -> build/bdist.linux-x86_64/wheel/./persisthunt
+2026-10-10T18:50:23.3495558Z running install_egg_info
+2026-10-10T18:50:23.3495789Z Copying persisthunt.egg-info to build/bdist.linux-x86_64/wheel/./persisthunt-0.1.0-py3.11.egg-info
+2026-10-10T18:50:23.3496123Z running install_scripts
+2026-10-10T18:50:23.3497838Z creating build/bdist.linux-x86_64/wheel/persisthunt-0.1.0.dist-info/WHEEL
+2026-10-10T18:50:23.3500676Z creating '/home/runner/work/persistHunt/persistHunt/dist/.tmp-xrayovjc/persisthunt-0.1.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+2026-10-10T18:50:23.3502895Z adding 'persisthunt/__init__.py'
+2026-10-10T18:50:23.3504563Z adding 'persisthunt/__main__.py'
+2026-10-10T18:50:23.3506854Z adding 'persisthunt/cli.py'
+2026-10-10T18:50:23.3508482Z adding 'persisthunt/findings.py'
+2026-10-10T18:50:23.3511827Z adding 'persisthunt/reporting.py'
+2026-10-10T18:50:23.3514014Z adding 'persisthunt/risk.py'
+2026-10-10T18:50:23.3515485Z adding 'persisthunt/detectors/__init__.py'
+2026-10-10T18:50:23.3519075Z adding 'persisthunt/detectors/account.py'
+2026-10-10T18:50:23.3520781Z adding 'persisthunt/detectors/base.py'
+2026-10-10T18:50:23.3524661Z adding 'persisthunt/detectors/cron.py'
+2026-10-10T18:50:23.3527919Z adding 'persisthunt/detectors/process.py'
+2026-10-10T18:50:23.3531690Z adding 'persisthunt/detectors/shell.py'
+2026-10-10T18:50:23.3536012Z adding 'persisthunt/detectors/ssh.py'
+2026-10-10T18:50:23.3538752Z adding 'persisthunt/detectors/suid.py'
+2026-10-10T18:50:23.3542580Z adding 'persisthunt/detectors/systemd.py'
+2026-10-10T18:50:23.3544766Z adding 'persisthunt-0.1.0.dist-info/licenses/LICENSE'
+2026-10-10T18:50:23.3548520Z adding 'persisthunt-0.1.0.dist-info/METADATA'
+2026-10-10T18:50:23.3550549Z adding 'persisthunt-0.1.0.dist-info/WHEEL'
+2026-10-10T18:50:23.3550847Z adding 'persisthunt-0.1.0.dist-info/entry_points.txt'
+2026-10-10T18:50:23.3551144Z adding 'persisthunt-0.1.0.dist-info/top_level.txt'
+2026-10-10T18:50:23.3552141Z adding 'persisthunt-0.1.0.dist-info/RECORD'
+2026-10-10T18:50:23.3553376Z removing build/bdist.linux-x86_64/wheel
+2026-10-10T18:50:23.3760694Z WARNING `project.license` as a TOML table is deprecated
+2026-10-10T18:50:23.3760984Z !!
+2026-10-10T18:50:23.3761062Z 
+2026-10-10T18:50:23.3761143Z         ********************************************************************************
+2026-10-10T18:50:23.3761549Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+2026-10-10T18:50:23.3761856Z 
+2026-10-10T18:50:23.3761969Z         By 2027-Feb-18, you need to update your project and remove deprecated calls
+2026-10-10T18:50:23.3762202Z         or your builds will no longer be supported.
+2026-10-10T18:50:23.3762313Z 
+2026-10-10T18:50:23.3762484Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-10-10T18:50:23.3762757Z         ********************************************************************************
+2026-10-10T18:50:23.3762876Z 
+2026-10-10T18:50:23.3762918Z !!
+2026-10-10T18:50:23.3763093Z WARNING `extras_require` overwritten in `pyproject.toml` (optional-dependencies)
+2026-10-10T18:50:23.3892307Z Successfully built persisthunt-0.1.0.tar.gz and persisthunt-0.1.0-py3-none-any.whl
+2026-10-10T18:50:23.4048069Z ##[group]Run twine check dist/*
+2026-10-10T18:50:23.4048251Z [36;1mtwine check dist/*[0m
+2026-10-10T18:50:23.4098335Z shell: /usr/bin/bash -e {0}
+2026-10-10T18:50:23.4098468Z env:
+2026-10-10T18:50:23.4098616Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:23.4098843Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-10T18:50:23.4099062Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:23.4099260Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:23.4099456Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:23.4099656Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-10T18:50:23.4099825Z ##[endgroup]
+2026-10-10T18:50:23.6926843Z Checking dist/persisthunt-0.1.0-py3-none-any.whl: [32mPASSED[0m
+2026-10-10T18:50:23.6968634Z Checking dist/persisthunt-0.1.0.tar.gz: [32mPASSED[0m
+2026-10-10T18:50:23.7433962Z Post job cleanup.
+2026-10-10T18:50:23.8190718Z (node:2196) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-10T18:50:23.8191151Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-10T18:50:23.8346875Z Post job cleanup.
+2026-10-10T18:50:23.8924936Z [command]/usr/bin/git version
+2026-10-10T18:50:23.8957152Z git version 2.55.0
+2026-10-10T18:50:23.8981591Z Temporarily overriding HOME='/home/runner/work/_temp/448c1145-69d9-4106-a739-e6a987cb8975' before making global git config changes
+2026-10-10T18:50:23.8982269Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-10T18:50:23.8985501Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/persistHunt/persistHunt
+2026-10-10T18:50:23.9022269Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-10T18:50:23.9053010Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-10T18:50:23.9262234Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-10T18:50:23.9293637Z http.https://github.com/.extraheader
+2026-10-10T18:50:23.9304044Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-10T18:50:23.9340860Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-10T18:50:23.9541670Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-10T18:50:23.9570428Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-10T18:50:23.9856157Z Cleaning up orphan processes
+2026-10-10T18:50:24.0054284Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

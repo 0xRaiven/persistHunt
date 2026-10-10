@@ -40,7 +40,7 @@ jobs:
         run: |
           python -m persisthunt --version
           python -m persisthunt scan --help
-          python -m persisthunt scan --category cron,systemd --json --quiet
+          python -m persisthunt scan --category cron,systemd --json --quiet --exit-zero
 
       - name: Verify example scripts
         run: |

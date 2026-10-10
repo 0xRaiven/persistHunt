@@ -1,0 +1,33 @@
+﻿2026-10-10T18:50:12.6738023Z Current runner version: '2.337.0'
+2026-10-10T18:50:12.6754450Z ##[group]Runner Image Provisioner
+2026-10-10T18:50:12.6754944Z Hosted Compute Agent
+2026-10-10T18:50:12.6755368Z Version: 20261002.596
+2026-10-10T18:50:12.6755730Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-10T18:50:12.6756232Z Build Date: 2026-10-02T22:28:27Z
+2026-10-10T18:50:12.6756623Z Worker ID: {d07479a2-bed1-4e71-9763-ba1bc2953ee6}
+2026-10-10T18:50:12.6757046Z Region: centralus
+2026-10-10T18:50:12.6757424Z Cloud: Azure
+2026-10-10T18:50:12.6757741Z ##[endgroup]
+2026-10-10T18:50:12.6758485Z ##[group]Operating System
+2026-10-10T18:50:12.6758841Z Ubuntu
+2026-10-10T18:50:12.6759343Z 24.04.5
+2026-10-10T18:50:12.6759682Z LTS
+2026-10-10T18:50:12.6759984Z ##[endgroup]
+2026-10-10T18:50:12.6760377Z ##[group]Runner Image
+2026-10-10T18:50:12.6760732Z Image: ubuntu-24.04
+2026-10-10T18:50:12.6761089Z Version: 20261004.327.1
+2026-10-10T18:50:12.6761708Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-10T18:50:12.6762722Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-10T18:50:12.6763272Z ##[endgroup]
+2026-10-10T18:50:12.6764131Z ##[group]GITHUB_TOKEN Permissions
+2026-10-10T18:50:12.6765424Z Contents: read
+2026-10-10T18:50:12.6765785Z Metadata: read
+2026-10-10T18:50:12.6766151Z ##[endgroup]
+2026-10-10T18:50:12.6767464Z Secret source: Actions
+2026-10-10T18:50:12.6768040Z Cache mode: write
+2026-10-10T18:50:12.6768553Z Prepare workflow directory
+2026-10-10T18:50:12.6966558Z Prepare all required actions
+2026-10-10T18:50:12.6995552Z Getting action download info
+2026-10-10T18:50:12.8772342Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-10T18:50:12.9582640Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-10T18:50:13.1043110Z Complete job name: Test (Python 3.10)

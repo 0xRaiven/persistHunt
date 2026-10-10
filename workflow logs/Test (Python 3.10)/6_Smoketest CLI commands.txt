@@ -1,0 +1,241 @@
+﻿2026-10-10T18:50:41.8064678Z ##[group]Run python -m persisthunt --version
+2026-10-10T18:50:41.8064899Z [36;1mpython -m persisthunt --version[0m
+2026-10-10T18:50:41.8065068Z [36;1mpython -m persisthunt scan --help[0m
+2026-10-10T18:50:41.8065272Z [36;1mpython -m persisthunt scan --category cron,systemd --json --quiet[0m
+2026-10-10T18:50:41.8116678Z shell: /usr/bin/bash -e {0}
+2026-10-10T18:50:41.8116813Z env:
+2026-10-10T18:50:41.8116952Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-10T18:50:41.8117177Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-10-10T18:50:41.8117398Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-10T18:50:41.8117595Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-10T18:50:41.8117790Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-10T18:50:41.8117990Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-10-10T18:50:41.8118159Z ##[endgroup]
+2026-10-10T18:50:41.8519593Z PersistHunt 0.1.0
+2026-10-10T18:50:41.8918392Z usage: persisthunt scan [-h] [--json] [-c CATEGORIES]
+2026-10-10T18:50:41.8918862Z                         [-s {info,low,medium,high,critical}] [-o FILE] [-q]
+2026-10-10T18:50:41.8919330Z                         [--exit-zero] [--root-prefix ROOT_PREFIX]
+2026-10-10T18:50:41.8919515Z 
+2026-10-10T18:50:41.8919660Z Scan the system using configured persistence detectors.
+2026-10-10T18:50:41.8919847Z 
+2026-10-10T18:50:41.8919914Z options:
+2026-10-10T18:50:41.8920117Z   -h, --help            show this help message and exit
+2026-10-10T18:50:41.8920424Z   --json                Output scan results in machine-readable JSON format
+2026-10-10T18:50:41.8920716Z   -c CATEGORIES, --category CATEGORIES
+2026-10-10T18:50:41.8920973Z                         Filter detector execution by category (e.g. cron,
+2026-10-10T18:50:41.8921282Z                         systemd, ssh, shell, suid, process, account). Can be
+2026-10-10T18:50:41.8921604Z                         specified multiple times or as comma-separated values.
+2026-10-10T18:50:41.8921991Z   -s {info,low,medium,high,critical}, --severity {info,low,medium,high,critical}
+2026-10-10T18:50:41.8922721Z                         Filter findings by minimum severity threshold (case-
+2026-10-10T18:50:41.8922985Z                         insensitive)
+2026-10-10T18:50:41.8923191Z   -o FILE, --output FILE
+2026-10-10T18:50:41.8923420Z                         Save report to file (.json or .html based on file
+2026-10-10T18:50:41.8923676Z                         extension)
+2026-10-10T18:50:41.8923927Z   -q, --quiet           Suppress scan progress messages on stderr
+2026-10-10T18:50:41.8924261Z   --exit-zero           Return exit code 0 even if HIGH or CRITICAL threats
+2026-10-10T18:50:41.8924548Z                         are detected
+2026-10-10T18:50:41.8924761Z   --root-prefix ROOT_PREFIX
+2026-10-10T18:50:41.8925015Z                         Target filesystem root prefix for offline image or
+2026-10-10T18:50:41.8925320Z                         container inspection
+2026-10-10T18:50:41.9833768Z {
+2026-10-10T18:50:41.9834033Z   "tool": "PersistHunt",
+2026-10-10T18:50:41.9834269Z   "version": "0.1.0",
+2026-10-10T18:50:41.9834480Z   "timestamp": "2026-10-10T18:50:41.983118+00:00",
+2026-10-10T18:50:41.9834724Z   "host": "runnervmmprz5",
+2026-10-10T18:50:41.9834905Z   "risk_score": 9.2,
+2026-10-10T18:50:41.9835073Z   "statistics": {
+2026-10-10T18:50:41.9835241Z     "total_findings": 16,
+2026-10-10T18:50:41.9835408Z     "highest_severity": "HIGH",
+2026-10-10T18:50:41.9835539Z     "severity_counts": {
+2026-10-10T18:50:41.9835657Z       "CRITICAL": 0,
+2026-10-10T18:50:41.9835764Z       "HIGH": 1,
+2026-10-10T18:50:41.9835870Z       "MEDIUM": 13,
+2026-10-10T18:50:41.9835973Z       "LOW": 1,
+2026-10-10T18:50:41.9836073Z       "INFO": 1
+2026-10-10T18:50:41.9836171Z     },
+2026-10-10T18:50:41.9836274Z     "category_counts": {
+2026-10-10T18:50:41.9836389Z       "cron": 7,
+2026-10-10T18:50:41.9836490Z       "systemd": 9
+2026-10-10T18:50:41.9836590Z     },
+2026-10-10T18:50:41.9836688Z     "raw_score": 46.0,
+2026-10-10T18:50:41.9837199Z     "detector_status": {
+2026-10-10T18:50:41.9837328Z       "cron": "permission-limited",
+2026-10-10T18:50:41.9837466Z       "systemd": "successful"
+2026-10-10T18:50:41.9837588Z     }
+2026-10-10T18:50:41.9837680Z   },
+2026-10-10T18:50:41.9837773Z   "findings": [
+2026-10-10T18:50:41.9837874Z     {
+2026-10-10T18:50:41.9837978Z       "id": "PH-CRON-005",
+2026-10-10T18:50:41.9838102Z       "category": "cron",
+2026-10-10T18:50:41.9838222Z       "severity": "HIGH",
+2026-10-10T18:50:41.9838370Z       "title": "Encoded payload decoding in cron entry",
+2026-10-10T18:50:41.9838682Z       "description": "Command decodes base64 data, an indicator commonly used to obfuscate commands, scripts, or reverse shells.",
+2026-10-10T18:50:41.9839189Z       "evidence": "echo \"$PGP_KEY_DATA\" | base64 -d >\"$GPG_FILE.$$.tmp\"",
+2026-10-10T18:50:41.9839461Z       "location": "/etc/cron.daily/microsoft-edge:81",
+2026-10-10T18:50:41.9839734Z       "recommendation": "Decode and review the base64 content to ensure it does not execute unauthorized commands."
+2026-10-10T18:50:41.9839989Z     },
+2026-10-10T18:50:41.9840082Z     {
+2026-10-10T18:50:41.9840186Z       "id": "PH-CRON-006",
+2026-10-10T18:50:41.9840308Z       "category": "cron",
+2026-10-10T18:50:41.9840428Z       "severity": "MEDIUM",
+2026-10-10T18:50:41.9840575Z       "title": "Suspicious hidden file in cron directory",
+2026-10-10T18:50:41.9840962Z       "description": "Hidden file '.placeholder' detected in cron directory /etc/cron.d. Cron typically ignores dotfiles, but hidden files in system cron directories are anomalous.",
+2026-10-10T18:50:41.9841331Z       "evidence": "Filename: .placeholder",
+2026-10-10T18:50:41.9841491Z       "location": "/etc/cron.d/.placeholder",
+2026-10-10T18:50:41.9841703Z       "recommendation": "Investigate the origin and purpose of this hidden file."
+2026-10-10T18:50:41.9841896Z     },
+2026-10-10T18:50:41.9841988Z     {
+2026-10-10T18:50:41.9842087Z       "id": "PH-CRON-006",
+2026-10-10T18:50:41.9842207Z       "category": "cron",
+2026-10-10T18:50:41.9842329Z       "severity": "MEDIUM",
+2026-10-10T18:50:41.9842601Z       "title": "Suspicious hidden file in cron directory",
+2026-10-10T18:50:41.9842843Z       "description": "Hidden file '.placeholder' detected in cron directory /etc/cron.hourly.",
+2026-10-10T18:50:41.9843072Z       "evidence": "Filename: .placeholder",
+2026-10-10T18:50:41.9843230Z       "location": "/etc/cron.hourly/.placeholder",
+2026-10-10T18:50:41.9843438Z       "recommendation": "Investigate the origin and purpose of this hidden file."
+2026-10-10T18:50:41.9843625Z     },
+2026-10-10T18:50:41.9843714Z     {
+2026-10-10T18:50:41.9843813Z       "id": "PH-CRON-006",
+2026-10-10T18:50:41.9843933Z       "category": "cron",
+2026-10-10T18:50:41.9844048Z       "severity": "MEDIUM",
+2026-10-10T18:50:41.9844191Z       "title": "Suspicious hidden file in cron directory",
+2026-10-10T18:50:41.9844427Z       "description": "Hidden file '.placeholder' detected in cron directory /etc/cron.daily.",
+2026-10-10T18:50:41.9844657Z       "evidence": "Filename: .placeholder",
+2026-10-10T18:50:41.9844812Z       "location": "/etc/cron.daily/.placeholder",
+2026-10-10T18:50:41.9845023Z       "recommendation": "Investigate the origin and purpose of this hidden file."
+2026-10-10T18:50:41.9845213Z     },
+2026-10-10T18:50:41.9845305Z     {
+2026-10-10T18:50:41.9845402Z       "id": "PH-CRON-006",
+2026-10-10T18:50:41.9845521Z       "category": "cron",
+2026-10-10T18:50:41.9845638Z       "severity": "MEDIUM",
+2026-10-10T18:50:41.9845778Z       "title": "Suspicious hidden file in cron directory",
+2026-10-10T18:50:41.9846013Z       "description": "Hidden file '.placeholder' detected in cron directory /etc/cron.weekly.",
+2026-10-10T18:50:41.9846241Z       "evidence": "Filename: .placeholder",
+2026-10-10T18:50:41.9846394Z       "location": "/etc/cron.weekly/.placeholder",
+2026-10-10T18:50:41.9846600Z       "recommendation": "Investigate the origin and purpose of this hidden file."
+2026-10-10T18:50:41.9846787Z     },
+2026-10-10T18:50:41.9846985Z     {
+2026-10-10T18:50:41.9847080Z       "id": "PH-CRON-006",
+2026-10-10T18:50:41.9847204Z       "category": "cron",
+2026-10-10T18:50:41.9847320Z       "severity": "MEDIUM",
+2026-10-10T18:50:41.9847461Z       "title": "Suspicious hidden file in cron directory",
+2026-10-10T18:50:41.9847701Z       "description": "Hidden file '.placeholder' detected in cron directory /etc/cron.monthly.",
+2026-10-10T18:50:41.9847927Z       "evidence": "Filename: .placeholder",
+2026-10-10T18:50:41.9848084Z       "location": "/etc/cron.monthly/.placeholder",
+2026-10-10T18:50:41.9848295Z       "recommendation": "Investigate the origin and purpose of this hidden file."
+2026-10-10T18:50:41.9848480Z     },
+2026-10-10T18:50:41.9848568Z     {
+2026-10-10T18:50:41.9848676Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:50:41.9848806Z       "category": "systemd",
+2026-10-10T18:50:41.9848930Z       "severity": "MEDIUM",
+2026-10-10T18:50:41.9849174Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:50:41.9849485Z       "description": "ExecStartPre uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:50:41.9849842Z       "evidence": "/bin/sh -c '[ -s /boot/grub/grubenv ] || rm -f /boot/grub/grubenv; mkdir -p /boot/grub'",
+2026-10-10T18:50:41.9850134Z       "location": "/etc/systemd/system/suspend.target.wants/grub-common.service:9",
+2026-10-10T18:50:41.9850426Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:50:41.9850645Z     },
+2026-10-10T18:50:41.9850734Z     {
+2026-10-10T18:50:41.9850832Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:50:41.9850959Z       "category": "systemd",
+2026-10-10T18:50:41.9851084Z       "severity": "MEDIUM",
+2026-10-10T18:50:41.9851244Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:50:41.9851538Z       "description": "ExecStartPost uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:50:41.9852065Z       "evidence": "/bin/sh -c 'if grub-editenv /boot/grub/grubenv list | grep -q initrdless_boot_fallback_triggered=1; then echo \"grub: GRUB_FORCE_PARTUUID set, initrdless boot paniced, fallback triggered.\"; fi'",
+2026-10-10T18:50:41.9852621Z       "location": "/etc/systemd/system/suspend.target.wants/grub-common.service:11",
+2026-10-10T18:50:41.9852916Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:50:41.9853136Z     },
+2026-10-10T18:50:41.9853225Z     {
+2026-10-10T18:50:41.9853326Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:50:41.9853452Z       "category": "systemd",
+2026-10-10T18:50:41.9853578Z       "severity": "MEDIUM",
+2026-10-10T18:50:41.9853740Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:50:41.9854021Z       "description": "ExecStop uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:50:41.9854399Z       "evidence": "/bin/sh -c '/usr/bin/podman $LOGGING stop $(/usr/bin/podman container ls --filter restart-policy=always -q)'",
+2026-10-10T18:50:41.9854744Z       "location": "/etc/systemd/system/default.target.wants/podman-restart.service:13",
+2026-10-10T18:50:41.9855047Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:50:41.9855266Z     },
+2026-10-10T18:50:41.9855355Z     {
+2026-10-10T18:50:41.9855453Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:50:41.9855578Z       "category": "systemd",
+2026-10-10T18:50:41.9855701Z       "severity": "MEDIUM",
+2026-10-10T18:50:41.9855861Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:50:41.9856147Z       "description": "ExecStart uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:50:41.9856457Z       "evidence": "/bin/sh -c \"echo add > /sys/class/fc/fc_udev_device/nvme_discovery\"",
+2026-10-10T18:50:41.9856746Z       "location": "/etc/systemd/system/default.target.wants/nvmefc-boot-connections.service:10",
+2026-10-10T18:50:41.9857144Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:50:41.9857364Z     },
+2026-10-10T18:50:41.9857451Z     {
+2026-10-10T18:50:41.9857550Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:50:41.9857685Z       "category": "systemd",
+2026-10-10T18:50:41.9857813Z       "severity": "MEDIUM",
+2026-10-10T18:50:41.9857972Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:50:41.9858254Z       "description": "ExecStart uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:50:41.9858570Z       "evidence": "sh -c '[ \"$AUTOSCAN\" != \"true\" ] || /sbin/mdadm --monitor --oneshot --scan'",
+2026-10-10T18:50:41.9858825Z       "location": "/usr/lib/systemd/system/mdmonitor-oneshot.service:14",
+2026-10-10T18:50:41.9859167Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:50:41.9859390Z     },
+2026-10-10T18:50:41.9859479Z     {
+2026-10-10T18:50:41.9859584Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:50:41.9859707Z       "category": "systemd",
+2026-10-10T18:50:41.9859829Z       "severity": "MEDIUM",
+2026-10-10T18:50:41.9859989Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:50:41.9860271Z       "description": "ExecStart uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:50:41.9860641Z       "evidence": "/bin/sh -c \"/usr/sbin/nvme connect-all --context=autoconnect --quiet `/bin/echo -e '${CONNECT_ARGS}'`\"",
+2026-10-10T18:50:41.9860938Z       "location": "/usr/lib/systemd/system/nvmf-connect@.service:16",
+2026-10-10T18:50:41.9861200Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:50:41.9861420Z     },
+2026-10-10T18:50:41.9861511Z     {
+2026-10-10T18:50:41.9861607Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:50:41.9861737Z       "category": "systemd",
+2026-10-10T18:50:41.9861944Z       "severity": "MEDIUM",
+2026-10-10T18:50:41.9862104Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:50:41.9862386Z       "description": "ExecStart uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:50:41.9862754Z       "evidence": "/bin/bash -c 'read args <&3; echo \"args=$args\"; exec /usr/bin/cloud-init devel hotplug-hook $args; exit 0'",
+2026-10-10T18:50:41.9863062Z       "location": "/usr/lib/systemd/system/cloud-init-hotplugd.service:23",
+2026-10-10T18:50:41.9878166Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:50:41.9878542Z     },
+2026-10-10T18:50:41.9878684Z     {
+2026-10-10T18:50:41.9878844Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:50:41.9879135Z       "category": "systemd",
+2026-10-10T18:50:41.9879321Z       "severity": "MEDIUM",
+2026-10-10T18:50:41.9879563Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:50:41.9879991Z       "description": "ExecStop uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:50:41.9880567Z       "evidence": "/bin/sh -c '/usr/bin/podman $LOGGING stop $(/usr/bin/podman container ls --filter restart-policy=always -q)'",
+2026-10-10T18:50:41.9881017Z       "location": "/usr/lib/systemd/user/podman-restart.service:13",
+2026-10-10T18:50:41.9881408Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:50:41.9881732Z     },
+2026-10-10T18:50:41.9881865Z     {
+2026-10-10T18:50:41.9882013Z       "id": "PH-SYSTEMD-091",
+2026-10-10T18:50:41.9882203Z       "category": "systemd",
+2026-10-10T18:50:41.9882392Z       "severity": "LOW",
+2026-10-10T18:50:41.9882606Z       "title": "Broken symlink in systemd directory",
+2026-10-10T18:50:41.9883041Z       "description": "Symlink at /etc/systemd/system/multi-user.target.wants/apport.service points to non-existent target.",
+2026-10-10T18:50:41.9883717Z       "evidence": "Symlink target: /usr/lib/systemd/system/apport.service",
+2026-10-10T18:50:41.9884088Z       "location": "/etc/systemd/system/multi-user.target.wants/apport.service",
+2026-10-10T18:50:41.9884554Z       "recommendation": "Verify why the target unit was removed and clean up the dangling symlink."
+2026-10-10T18:50:41.9884900Z     },
+2026-10-10T18:50:41.9885047Z     {
+2026-10-10T18:50:41.9885210Z       "id": "PH-CRON-090",
+2026-10-10T18:50:41.9885409Z       "category": "cron",
+2026-10-10T18:50:41.9885606Z       "severity": "INFO",
+2026-10-10T18:50:41.9885859Z       "title": "Unreadable user crontab spool (permission denied)",
+2026-10-10T18:50:41.9886508Z       "description": "Permission was denied when accessing user crontab directory at /var/spool/cron/crontabs. Inspecting user crontabs typically requires elevated privileges.",
+2026-10-10T18:50:41.9887200Z       "evidence": "[Errno 13] Permission denied: '/var/spool/cron/crontabs'",
+2026-10-10T18:50:41.9887535Z       "location": "/var/spool/cron/crontabs",
+2026-10-10T18:50:41.9887975Z       "recommendation": "Run PersistHunt with elevated permissions (e.g. root) to audit restricted user crontabs."
+2026-10-10T18:50:41.9888370Z     }
+2026-10-10T18:50:41.9888517Z   ],
+2026-10-10T18:50:41.9888680Z   "detector_status": {
+2026-10-10T18:50:41.9888858Z     "cron": {
+2026-10-10T18:50:41.9889195Z       "status": "permission-limited",
+2026-10-10T18:50:41.9889402Z       "findings_count": 7,
+2026-10-10T18:50:41.9889605Z       "error": null
+2026-10-10T18:50:41.9889763Z     },
+2026-10-10T18:50:41.9889926Z     "systemd": {
+2026-10-10T18:50:41.9890092Z       "status": "successful",
+2026-10-10T18:50:41.9890292Z       "findings_count": 9,
+2026-10-10T18:50:41.9890487Z       "error": null
+2026-10-10T18:50:41.9890643Z     }
+2026-10-10T18:50:41.9890805Z   }
+2026-10-10T18:50:41.9890970Z }
+2026-10-10T18:50:41.9917789Z ##[error]Process completed with exit code 2.

@@ -1,0 +1,39 @@
+﻿2026-10-10T18:50:14.0334793Z ##[group]Run actions/setup-python@v5
+2026-10-10T18:50:14.0335630Z with:
+2026-10-10T18:50:14.0336064Z   python-version: 3.8
+2026-10-10T18:50:14.0336543Z   check-latest: false
+2026-10-10T18:50:14.0340379Z   token: ***
+2026-10-10T18:50:14.0340835Z   update-environment: true
+2026-10-10T18:50:14.0341347Z   allow-prereleases: false
+2026-10-10T18:50:14.0341852Z   freethreaded: false
+2026-10-10T18:50:14.0342509Z ##[endgroup]
+2026-10-10T18:50:14.1681477Z ##[group]Installed versions
+2026-10-10T18:50:14.1760114Z Version 3.8 was not found in the local cache
+2026-10-10T18:50:14.1889392Z (node:2292) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-10T18:50:14.1890811Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-10T18:50:14.5866085Z Version 3.8 is available for downloading
+2026-10-10T18:50:14.5869180Z Download from "https://github.com/actions/python-versions/releases/download/3.8.18-12303122501/python-3.8.18-linux-24.04-x64.tar.gz"
+2026-10-10T18:50:15.2753798Z Extract downloaded archive
+2026-10-10T18:50:15.2894556Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/aa1dd96a-8123-407a-9c48-1f0a99e9ef59 -f /home/runner/work/_temp/1ea26f11-471a-4f5e-9a99-24960066d20e
+2026-10-10T18:50:16.6001181Z Execute installation script
+2026-10-10T18:50:16.6100916Z Check if Python hostedtoolcache folder exist...
+2026-10-10T18:50:16.6101781Z Create Python 3.8.18 folder
+2026-10-10T18:50:16.6118703Z Copy Python binaries to hostedtoolcache folder
+2026-10-10T18:50:17.0563046Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-10-10T18:50:17.0606819Z Upgrading pip...
+2026-10-10T18:50:18.7799669Z Looking in links: /tmp/tmpznllh2c5
+2026-10-10T18:50:18.7803944Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (56.0.0)
+2026-10-10T18:50:18.7809910Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (23.0.1)
+2026-10-10T18:50:19.8490743Z Collecting pip
+2026-10-10T18:50:19.9008089Z Downloading pip-25.0.1-py3-none-any.whl (1.8 MB)
+2026-10-10T18:50:19.9953077Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 20.2 MB/s eta 0:00:00
+2026-10-10T18:50:19.9975723Z 
+2026-10-10T18:50:20.0336036Z Installing collected packages: pip
+2026-10-10T18:50:20.0337125Z Attempting uninstall: pip
+2026-10-10T18:50:20.0344358Z Found existing installation: pip 23.0.1
+2026-10-10T18:50:20.2255754Z Uninstalling pip-23.0.1:
+2026-10-10T18:50:20.2328519Z Successfully uninstalled pip-23.0.1
+2026-10-10T18:50:20.9989330Z Successfully installed pip-25.0.1
+2026-10-10T18:50:21.0565054Z Create complete file
+2026-10-10T18:50:21.0614929Z Successfully set up CPython (3.8.18)
+2026-10-10T18:50:21.0616593Z ##[endgroup]

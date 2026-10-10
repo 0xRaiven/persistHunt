@@ -1,0 +1,242 @@
+﻿2026-10-10T18:50:20.8687247Z ##[group]Run python -m build
+2026-10-10T18:50:20.8687549Z [36;1mpython -m build[0m
+2026-10-10T18:50:20.8741527Z shell: /usr/bin/bash -e {0}
+2026-10-10T18:50:20.8741679Z env:
+2026-10-10T18:50:20.8741836Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:20.8742068Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-10T18:50:20.8742292Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:20.8742494Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:20.8742867Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:20.8743072Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-10T18:50:20.8743243Z ##[endgroup]
+2026-10-10T18:50:20.9960905Z * Creating isolated environment: venv+pip...
+2026-10-10T18:50:21.0277263Z * Installing packages in isolated environment:
+2026-10-10T18:50:21.0277892Z   - setuptools>=61.0.0
+2026-10-10T18:50:21.0278061Z   - wheel
+2026-10-10T18:50:21.7403191Z * Getting build dependencies for sdist...
+2026-10-10T18:50:22.1665690Z running egg_info
+2026-10-10T18:50:22.1672630Z creating persisthunt.egg-info
+2026-10-10T18:50:22.1673438Z writing persisthunt.egg-info/PKG-INFO
+2026-10-10T18:50:22.1678567Z writing dependency_links to persisthunt.egg-info/dependency_links.txt
+2026-10-10T18:50:22.1679581Z writing entry points to persisthunt.egg-info/entry_points.txt
+2026-10-10T18:50:22.1682379Z writing requirements to persisthunt.egg-info/requires.txt
+2026-10-10T18:50:22.1682850Z writing top-level names to persisthunt.egg-info/top_level.txt
+2026-10-10T18:50:22.1684191Z writing manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:22.1705777Z reading manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:22.1707009Z adding license file 'LICENSE'
+2026-10-10T18:50:22.1712507Z writing manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:22.2040166Z WARNING `project.license` as a TOML table is deprecated
+2026-10-10T18:50:22.2040531Z !!
+2026-10-10T18:50:22.2040622Z 
+2026-10-10T18:50:22.2040708Z         ********************************************************************************
+2026-10-10T18:50:22.2041122Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+2026-10-10T18:50:22.2041441Z 
+2026-10-10T18:50:22.2041552Z         By 2027-Feb-18, you need to update your project and remove deprecated calls
+2026-10-10T18:50:22.2041788Z         or your builds will no longer be supported.
+2026-10-10T18:50:22.2041901Z 
+2026-10-10T18:50:22.2042103Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-10-10T18:50:22.2042379Z         ********************************************************************************
+2026-10-10T18:50:22.2042499Z 
+2026-10-10T18:50:22.2042540Z !!
+2026-10-10T18:50:22.2042715Z WARNING `extras_require` overwritten in `pyproject.toml` (optional-dependencies)
+2026-10-10T18:50:22.2051232Z * Installed build dependency versions:
+2026-10-10T18:50:22.2051464Z   - setuptools==84.0.0
+2026-10-10T18:50:22.2051646Z   - wheel==0.48.0
+2026-10-10T18:50:22.2051812Z * Building sdist...
+2026-10-10T18:50:22.2998286Z running sdist
+2026-10-10T18:50:22.2998785Z running egg_info
+2026-10-10T18:50:22.3009417Z writing persisthunt.egg-info/PKG-INFO
+2026-10-10T18:50:22.3015118Z writing dependency_links to persisthunt.egg-info/dependency_links.txt
+2026-10-10T18:50:22.3016739Z writing entry points to persisthunt.egg-info/entry_points.txt
+2026-10-10T18:50:22.3019193Z writing requirements to persisthunt.egg-info/requires.txt
+2026-10-10T18:50:22.3019914Z writing top-level names to persisthunt.egg-info/top_level.txt
+2026-10-10T18:50:22.3040785Z reading manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:22.3044384Z adding license file 'LICENSE'
+2026-10-10T18:50:22.3049861Z writing manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:22.3083633Z running check
+2026-10-10T18:50:22.3101150Z creating persisthunt-0.1.0
+2026-10-10T18:50:22.3103007Z creating persisthunt-0.1.0/persisthunt
+2026-10-10T18:50:22.3109390Z creating persisthunt-0.1.0/persisthunt.egg-info
+2026-10-10T18:50:22.3115195Z creating persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3118543Z creating persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3118787Z copying files to persisthunt-0.1.0...
+2026-10-10T18:50:22.3119022Z copying LICENSE -> persisthunt-0.1.0
+2026-10-10T18:50:22.3119515Z copying README.md -> persisthunt-0.1.0
+2026-10-10T18:50:22.3119755Z copying pyproject.toml -> persisthunt-0.1.0
+2026-10-10T18:50:22.3120696Z copying setup.py -> persisthunt-0.1.0
+2026-10-10T18:50:22.3124272Z copying persisthunt/__init__.py -> persisthunt-0.1.0/persisthunt
+2026-10-10T18:50:22.3124917Z copying persisthunt/__main__.py -> persisthunt-0.1.0/persisthunt
+2026-10-10T18:50:22.3125460Z copying persisthunt/cli.py -> persisthunt-0.1.0/persisthunt
+2026-10-10T18:50:22.3126427Z copying persisthunt/findings.py -> persisthunt-0.1.0/persisthunt
+2026-10-10T18:50:22.3127194Z copying persisthunt/reporting.py -> persisthunt-0.1.0/persisthunt
+2026-10-10T18:50:22.3128023Z copying persisthunt/risk.py -> persisthunt-0.1.0/persisthunt
+2026-10-10T18:50:22.3134233Z copying persisthunt.egg-info/PKG-INFO -> persisthunt-0.1.0/persisthunt.egg-info
+2026-10-10T18:50:22.3140617Z copying persisthunt.egg-info/SOURCES.txt -> persisthunt-0.1.0/persisthunt.egg-info
+2026-10-10T18:50:22.3144920Z copying persisthunt.egg-info/dependency_links.txt -> persisthunt-0.1.0/persisthunt.egg-info
+2026-10-10T18:50:22.3145929Z copying persisthunt.egg-info/entry_points.txt -> persisthunt-0.1.0/persisthunt.egg-info
+2026-10-10T18:50:22.3150234Z copying persisthunt.egg-info/requires.txt -> persisthunt-0.1.0/persisthunt.egg-info
+2026-10-10T18:50:22.3150771Z copying persisthunt.egg-info/top_level.txt -> persisthunt-0.1.0/persisthunt.egg-info
+2026-10-10T18:50:22.3151264Z copying persisthunt/detectors/__init__.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3151845Z copying persisthunt/detectors/account.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3152390Z copying persisthunt/detectors/base.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3152896Z copying persisthunt/detectors/cron.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3153689Z copying persisthunt/detectors/process.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3154595Z copying persisthunt/detectors/shell.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3155485Z copying persisthunt/detectors/ssh.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3156405Z copying persisthunt/detectors/suid.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3157254Z copying persisthunt/detectors/systemd.py -> persisthunt-0.1.0/persisthunt/detectors
+2026-10-10T18:50:22.3158119Z copying tests/test_account_detector.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3158977Z copying tests/test_cli.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3159798Z copying tests/test_cron_detector.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3160831Z copying tests/test_detectors.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3161593Z copying tests/test_findings.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3162421Z copying tests/test_process_detector.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3163265Z copying tests/test_reporting.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3164061Z copying tests/test_risk_scoring.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3164861Z copying tests/test_safety_and_hardening.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3165702Z copying tests/test_shell_detector.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3166556Z copying tests/test_ssh_detector.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3167344Z copying tests/test_suid_detector.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3168121Z copying tests/test_systemd_detector.py -> persisthunt-0.1.0/tests
+2026-10-10T18:50:22.3174915Z Writing persisthunt-0.1.0/setup.cfg
+2026-10-10T18:50:22.3176108Z Creating tar archive
+2026-10-10T18:50:22.3420834Z removing 'persisthunt-0.1.0' (and everything under it)
+2026-10-10T18:50:22.4043567Z WARNING `project.license` as a TOML table is deprecated
+2026-10-10T18:50:22.4045678Z !!
+2026-10-10T18:50:22.4045758Z 
+2026-10-10T18:50:22.4045871Z         ********************************************************************************
+2026-10-10T18:50:22.4046653Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+2026-10-10T18:50:22.4046981Z 
+2026-10-10T18:50:22.4047105Z         By 2027-Feb-18, you need to update your project and remove deprecated calls
+2026-10-10T18:50:22.4047333Z         or your builds will no longer be supported.
+2026-10-10T18:50:22.4047445Z 
+2026-10-10T18:50:22.4049292Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-10-10T18:50:22.4049697Z         ********************************************************************************
+2026-10-10T18:50:22.4049821Z 
+2026-10-10T18:50:22.4049865Z !!
+2026-10-10T18:50:22.4050197Z WARNING `extras_require` overwritten in `pyproject.toml` (optional-dependencies)
+2026-10-10T18:50:22.4356956Z * Building wheel from sdist
+2026-10-10T18:50:22.4388976Z * Creating isolated environment: venv+pip...
+2026-10-10T18:50:22.4402017Z * Installing packages in isolated environment:
+2026-10-10T18:50:22.4402347Z   - setuptools>=61.0.0
+2026-10-10T18:50:22.4402529Z   - wheel
+2026-10-10T18:50:22.9662677Z * Getting build dependencies for wheel...
+2026-10-10T18:50:23.2232248Z running egg_info
+2026-10-10T18:50:23.2239079Z writing persisthunt.egg-info/PKG-INFO
+2026-10-10T18:50:23.2244037Z writing dependency_links to persisthunt.egg-info/dependency_links.txt
+2026-10-10T18:50:23.2245242Z writing entry points to persisthunt.egg-info/entry_points.txt
+2026-10-10T18:50:23.2247603Z writing requirements to persisthunt.egg-info/requires.txt
+2026-10-10T18:50:23.2248221Z writing top-level names to persisthunt.egg-info/top_level.txt
+2026-10-10T18:50:23.2268442Z reading manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:23.2272146Z adding license file 'LICENSE'
+2026-10-10T18:50:23.2277682Z writing manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:23.2483246Z WARNING `project.license` as a TOML table is deprecated
+2026-10-10T18:50:23.2483597Z !!
+2026-10-10T18:50:23.2483657Z 
+2026-10-10T18:50:23.2483742Z         ********************************************************************************
+2026-10-10T18:50:23.2484148Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+2026-10-10T18:50:23.2484459Z 
+2026-10-10T18:50:23.2484573Z         By 2027-Feb-18, you need to update your project and remove deprecated calls
+2026-10-10T18:50:23.2484808Z         or your builds will no longer be supported.
+2026-10-10T18:50:23.2484914Z 
+2026-10-10T18:50:23.2485113Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-10-10T18:50:23.2485447Z         ********************************************************************************
+2026-10-10T18:50:23.2485568Z 
+2026-10-10T18:50:23.2485608Z !!
+2026-10-10T18:50:23.2485784Z WARNING `extras_require` overwritten in `pyproject.toml` (optional-dependencies)
+2026-10-10T18:50:23.2493484Z * Installed build dependency versions:
+2026-10-10T18:50:23.2493710Z   - setuptools==84.0.0
+2026-10-10T18:50:23.2493891Z   - wheel==0.48.0
+2026-10-10T18:50:23.2494049Z * Building wheel...
+2026-10-10T18:50:23.3328271Z running bdist_wheel
+2026-10-10T18:50:23.3349436Z running build
+2026-10-10T18:50:23.3349659Z running build_py
+2026-10-10T18:50:23.3356511Z creating build/lib/persisthunt
+2026-10-10T18:50:23.3358414Z copying persisthunt/cli.py -> build/lib/persisthunt
+2026-10-10T18:50:23.3360235Z copying persisthunt/__main__.py -> build/lib/persisthunt
+2026-10-10T18:50:23.3361425Z copying persisthunt/findings.py -> build/lib/persisthunt
+2026-10-10T18:50:23.3362799Z copying persisthunt/reporting.py -> build/lib/persisthunt
+2026-10-10T18:50:23.3364013Z copying persisthunt/risk.py -> build/lib/persisthunt
+2026-10-10T18:50:23.3365096Z copying persisthunt/__init__.py -> build/lib/persisthunt
+2026-10-10T18:50:23.3367188Z creating build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3367935Z copying persisthunt/detectors/suid.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3369451Z copying persisthunt/detectors/cron.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3370711Z copying persisthunt/detectors/ssh.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3372036Z copying persisthunt/detectors/shell.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3373091Z copying persisthunt/detectors/process.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3374160Z copying persisthunt/detectors/account.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3375213Z copying persisthunt/detectors/systemd.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3376350Z copying persisthunt/detectors/__init__.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3377291Z copying persisthunt/detectors/base.py -> build/lib/persisthunt/detectors
+2026-10-10T18:50:23.3377971Z running egg_info
+2026-10-10T18:50:23.3383294Z writing persisthunt.egg-info/PKG-INFO
+2026-10-10T18:50:23.3389292Z writing dependency_links to persisthunt.egg-info/dependency_links.txt
+2026-10-10T18:50:23.3391750Z writing entry points to persisthunt.egg-info/entry_points.txt
+2026-10-10T18:50:23.3395035Z writing requirements to persisthunt.egg-info/requires.txt
+2026-10-10T18:50:23.3396943Z writing top-level names to persisthunt.egg-info/top_level.txt
+2026-10-10T18:50:23.3408928Z reading manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:23.3412400Z adding license file 'LICENSE'
+2026-10-10T18:50:23.3417830Z writing manifest file 'persisthunt.egg-info/SOURCES.txt'
+2026-10-10T18:50:23.3431600Z installing to build/bdist.linux-x86_64/wheel
+2026-10-10T18:50:23.3431873Z running install
+2026-10-10T18:50:23.3460940Z running install_lib
+2026-10-10T18:50:23.3466139Z creating build/bdist.linux-x86_64/wheel
+2026-10-10T18:50:23.3467853Z creating build/bdist.linux-x86_64/wheel/persisthunt
+2026-10-10T18:50:23.3468635Z copying build/lib/persisthunt/cli.py -> build/bdist.linux-x86_64/wheel/./persisthunt
+2026-10-10T18:50:23.3469839Z copying build/lib/persisthunt/__main__.py -> build/bdist.linux-x86_64/wheel/./persisthunt
+2026-10-10T18:50:23.3480633Z copying build/lib/persisthunt/findings.py -> build/bdist.linux-x86_64/wheel/./persisthunt
+2026-10-10T18:50:23.3490857Z copying build/lib/persisthunt/reporting.py -> build/bdist.linux-x86_64/wheel/./persisthunt
+2026-10-10T18:50:23.3491322Z creating build/bdist.linux-x86_64/wheel/persisthunt/detectors
+2026-10-10T18:50:23.3491663Z copying build/lib/persisthunt/detectors/suid.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3492032Z copying build/lib/persisthunt/detectors/cron.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3492380Z copying build/lib/persisthunt/detectors/ssh.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3492730Z copying build/lib/persisthunt/detectors/shell.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3493096Z copying build/lib/persisthunt/detectors/process.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3493458Z copying build/lib/persisthunt/detectors/account.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3493820Z copying build/lib/persisthunt/detectors/systemd.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3494182Z copying build/lib/persisthunt/detectors/__init__.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3494713Z copying build/lib/persisthunt/detectors/base.py -> build/bdist.linux-x86_64/wheel/./persisthunt/detectors
+2026-10-10T18:50:23.3495032Z copying build/lib/persisthunt/risk.py -> build/bdist.linux-x86_64/wheel/./persisthunt
+2026-10-10T18:50:23.3495327Z copying build/lib/persisthunt/__init__.py -> build/bdist.linux-x86_64/wheel/./persisthunt
+2026-10-10T18:50:23.3495556Z running install_egg_info
+2026-10-10T18:50:23.3495786Z Copying persisthunt.egg-info to build/bdist.linux-x86_64/wheel/./persisthunt-0.1.0-py3.11.egg-info
+2026-10-10T18:50:23.3496122Z running install_scripts
+2026-10-10T18:50:23.3497828Z creating build/bdist.linux-x86_64/wheel/persisthunt-0.1.0.dist-info/WHEEL
+2026-10-10T18:50:23.3500674Z creating '/home/runner/work/persistHunt/persistHunt/dist/.tmp-xrayovjc/persisthunt-0.1.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+2026-10-10T18:50:23.3502893Z adding 'persisthunt/__init__.py'
+2026-10-10T18:50:23.3504544Z adding 'persisthunt/__main__.py'
+2026-10-10T18:50:23.3506849Z adding 'persisthunt/cli.py'
+2026-10-10T18:50:23.3508479Z adding 'persisthunt/findings.py'
+2026-10-10T18:50:23.3511823Z adding 'persisthunt/reporting.py'
+2026-10-10T18:50:23.3514011Z adding 'persisthunt/risk.py'
+2026-10-10T18:50:23.3515481Z adding 'persisthunt/detectors/__init__.py'
+2026-10-10T18:50:23.3519071Z adding 'persisthunt/detectors/account.py'
+2026-10-10T18:50:23.3520777Z adding 'persisthunt/detectors/base.py'
+2026-10-10T18:50:23.3524658Z adding 'persisthunt/detectors/cron.py'
+2026-10-10T18:50:23.3527915Z adding 'persisthunt/detectors/process.py'
+2026-10-10T18:50:23.3531686Z adding 'persisthunt/detectors/shell.py'
+2026-10-10T18:50:23.3536009Z adding 'persisthunt/detectors/ssh.py'
+2026-10-10T18:50:23.3538749Z adding 'persisthunt/detectors/suid.py'
+2026-10-10T18:50:23.3542576Z adding 'persisthunt/detectors/systemd.py'
+2026-10-10T18:50:23.3544761Z adding 'persisthunt-0.1.0.dist-info/licenses/LICENSE'
+2026-10-10T18:50:23.3548508Z adding 'persisthunt-0.1.0.dist-info/METADATA'
+2026-10-10T18:50:23.3550542Z adding 'persisthunt-0.1.0.dist-info/WHEEL'
+2026-10-10T18:50:23.3550841Z adding 'persisthunt-0.1.0.dist-info/entry_points.txt'
+2026-10-10T18:50:23.3551143Z adding 'persisthunt-0.1.0.dist-info/top_level.txt'
+2026-10-10T18:50:23.3552138Z adding 'persisthunt-0.1.0.dist-info/RECORD'
+2026-10-10T18:50:23.3553372Z removing build/bdist.linux-x86_64/wheel
+2026-10-10T18:50:23.3760672Z WARNING `project.license` as a TOML table is deprecated
+2026-10-10T18:50:23.3760981Z !!
+2026-10-10T18:50:23.3761059Z 
+2026-10-10T18:50:23.3761141Z         ********************************************************************************
+2026-10-10T18:50:23.3761546Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+2026-10-10T18:50:23.3761855Z 
+2026-10-10T18:50:23.3761967Z         By 2027-Feb-18, you need to update your project and remove deprecated calls
+2026-10-10T18:50:23.3762190Z         or your builds will no longer be supported.
+2026-10-10T18:50:23.3762312Z 
+2026-10-10T18:50:23.3762482Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-10-10T18:50:23.3762756Z         ********************************************************************************
+2026-10-10T18:50:23.3762875Z 
+2026-10-10T18:50:23.3762917Z !!
+2026-10-10T18:50:23.3763091Z WARNING `extras_require` overwritten in `pyproject.toml` (optional-dependencies)
+2026-10-10T18:50:23.3892304Z Successfully built persisthunt-0.1.0.tar.gz and persisthunt-0.1.0-py3-none-any.whl

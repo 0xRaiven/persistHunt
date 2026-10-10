@@ -1,0 +1,33 @@
+﻿2026-10-10T18:50:12.8963827Z Current runner version: '2.337.0'
+2026-10-10T18:50:12.8986213Z ##[group]Runner Image Provisioner
+2026-10-10T18:50:12.8987160Z Hosted Compute Agent
+2026-10-10T18:50:12.8987726Z Version: 20261002.596
+2026-10-10T18:50:12.8988274Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-10T18:50:12.8989009Z Build Date: 2026-10-02T22:28:27Z
+2026-10-10T18:50:12.8989625Z Worker ID: {ad0f0051-30c9-40b1-b216-8e34b52e69ef}
+2026-10-10T18:50:12.8990272Z Region: westus3
+2026-10-10T18:50:12.8990776Z Cloud: Azure
+2026-10-10T18:50:12.8991263Z ##[endgroup]
+2026-10-10T18:50:12.8992565Z ##[group]Operating System
+2026-10-10T18:50:12.8993121Z Ubuntu
+2026-10-10T18:50:12.8993599Z 24.04.5
+2026-10-10T18:50:12.8994082Z LTS
+2026-10-10T18:50:12.8994565Z ##[endgroup]
+2026-10-10T18:50:12.8995258Z ##[group]Runner Image
+2026-10-10T18:50:12.8995839Z Image: ubuntu-24.04
+2026-10-10T18:50:12.8996334Z Version: 20261004.327.1
+2026-10-10T18:50:12.8997308Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-10T18:50:12.8998892Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-10T18:50:12.8999760Z ##[endgroup]
+2026-10-10T18:50:12.9001119Z ##[group]GITHUB_TOKEN Permissions
+2026-10-10T18:50:12.9002988Z Contents: read
+2026-10-10T18:50:12.9003487Z Metadata: read
+2026-10-10T18:50:12.9004065Z ##[endgroup]
+2026-10-10T18:50:12.9006200Z Secret source: Actions
+2026-10-10T18:50:12.9007056Z Cache mode: write
+2026-10-10T18:50:12.9007697Z Prepare workflow directory
+2026-10-10T18:50:12.9293842Z Prepare all required actions
+2026-10-10T18:50:12.9357503Z Getting action download info
+2026-10-10T18:50:13.2333918Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-10T18:50:13.3451347Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-10T18:50:13.5959693Z Complete job name: Test (Python 3.13)

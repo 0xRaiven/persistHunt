@@ -1,0 +1,39 @@
+﻿2026-10-10T18:50:14.7744745Z ##[group]Run actions/setup-python@v5
+2026-10-10T18:50:14.7745361Z with:
+2026-10-10T18:50:14.7745780Z   python-version: 3.9
+2026-10-10T18:50:14.7746241Z   check-latest: false
+2026-10-10T18:50:14.7750291Z   token: ***
+2026-10-10T18:50:14.7750736Z   update-environment: true
+2026-10-10T18:50:14.7751239Z   allow-prereleases: false
+2026-10-10T18:50:14.7751722Z   freethreaded: false
+2026-10-10T18:50:14.7752381Z ##[endgroup]
+2026-10-10T18:50:14.9149510Z ##[group]Installed versions
+2026-10-10T18:50:14.9227079Z Version 3.9 was not found in the local cache
+2026-10-10T18:50:14.9357207Z (node:2301) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-10T18:50:14.9358869Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-10T18:50:15.6966464Z Version 3.9 is available for downloading
+2026-10-10T18:50:15.6967592Z Download from "https://github.com/actions/python-versions/releases/download/3.9.25-19039189640/python-3.9.25-linux-24.04-x64.tar.gz"
+2026-10-10T18:50:16.4543280Z Extract downloaded archive
+2026-10-10T18:50:16.4700349Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/ff34db09-19bc-4d70-a5e2-167b06ba5472 -f /home/runner/work/_temp/40fb4699-f188-4999-a19f-d77cb7a4b45e
+2026-10-10T18:50:17.8316375Z Execute installation script
+2026-10-10T18:50:17.8443144Z Check if Python hostedtoolcache folder exist...
+2026-10-10T18:50:17.8444008Z Create Python 3.9.25 folder
+2026-10-10T18:50:17.8460549Z Copy Python binaries to hostedtoolcache folder
+2026-10-10T18:50:18.3158953Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-10-10T18:50:18.3199694Z Upgrading pip...
+2026-10-10T18:50:20.5109412Z Looking in links: /tmp/tmp8koiixtw
+2026-10-10T18:50:20.5113910Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (79.0.1)
+2026-10-10T18:50:20.5119177Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (23.0.1)
+2026-10-10T18:50:21.6885887Z Collecting pip
+2026-10-10T18:50:21.7208130Z Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+2026-10-10T18:50:21.7620519Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 47.2 MB/s eta 0:00:00
+2026-10-10T18:50:21.7621678Z 
+2026-10-10T18:50:21.8254793Z Installing collected packages: pip
+2026-10-10T18:50:21.8255898Z Attempting uninstall: pip
+2026-10-10T18:50:21.8262913Z Found existing installation: pip 23.0.1
+2026-10-10T18:50:22.0087202Z Uninstalling pip-23.0.1:
+2026-10-10T18:50:22.0161238Z Successfully uninstalled pip-23.0.1
+2026-10-10T18:50:22.8649951Z Successfully installed pip-26.0.1
+2026-10-10T18:50:22.9193459Z Create complete file
+2026-10-10T18:50:22.9240566Z Successfully set up CPython (3.9.25)
+2026-10-10T18:50:22.9243997Z ##[endgroup]

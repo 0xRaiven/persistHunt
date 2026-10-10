@@ -1,0 +1,13 @@
+﻿2026-10-10T18:50:23.4048061Z ##[group]Run twine check dist/*
+2026-10-10T18:50:23.4048249Z [36;1mtwine check dist/*[0m
+2026-10-10T18:50:23.4098330Z shell: /usr/bin/bash -e {0}
+2026-10-10T18:50:23.4098467Z env:
+2026-10-10T18:50:23.4098614Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:23.4098841Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-10T18:50:23.4099060Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:23.4099259Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:23.4099454Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-10T18:50:23.4099655Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-10T18:50:23.4099824Z ##[endgroup]
+2026-10-10T18:50:23.6926798Z Checking dist/persisthunt-0.1.0-py3-none-any.whl: [32mPASSED[0m
+2026-10-10T18:50:23.6968621Z Checking dist/persisthunt-0.1.0.tar.gz: [32mPASSED[0m

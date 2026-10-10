@@ -1,0 +1,56 @@
+﻿2026-10-10T18:50:13.7897045Z ##[group]Run python -m pip install --upgrade pip
+2026-10-10T18:50:13.7897560Z [36;1mpython -m pip install --upgrade pip[0m
+2026-10-10T18:50:13.7897933Z [36;1mpip install -e ".[dev]"[0m
+2026-10-10T18:50:13.8264959Z shell: /usr/bin/bash -e {0}
+2026-10-10T18:50:13.8265351Z env:
+2026-10-10T18:50:13.8265664Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-10T18:50:13.8266157Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-10-10T18:50:13.8266621Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-10T18:50:13.8267060Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-10T18:50:13.8267487Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-10T18:50:13.8267909Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-10-10T18:50:13.8268276Z ##[endgroup]
+2026-10-10T18:50:15.8843776Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.22/x64/lib/python3.10/site-packages (26.2.1)
+2026-10-10T18:50:16.3340396Z Obtaining file:///home/runner/work/persistHunt/persistHunt
+2026-10-10T18:50:16.3350536Z   Installing build dependencies: started
+2026-10-10T18:50:17.0753633Z   Installing build dependencies: finished with status 'done'
+2026-10-10T18:50:17.0759333Z   Checking if build backend supports build_editable: started
+2026-10-10T18:50:17.3042031Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-10-10T18:50:17.3048695Z   Getting requirements to build editable: started
+2026-10-10T18:50:17.5023001Z   Getting requirements to build editable: finished with status 'done'
+2026-10-10T18:50:17.5029355Z   Preparing editable metadata (pyproject.toml): started
+2026-10-10T18:50:17.6095542Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-10-10T18:50:17.9275789Z Collecting pytest>=7.0.0 (from persisthunt==0.1.0)
+2026-10-10T18:50:17.9958011Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-10-10T18:50:18.2969926Z Collecting exceptiongroup>=1 (from pytest>=7.0.0->persisthunt==0.1.0)
+2026-10-10T18:50:18.3102623Z   Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+2026-10-10T18:50:18.7045071Z Collecting iniconfig>=1.0.1 (from pytest>=7.0.0->persisthunt==0.1.0)
+2026-10-10T18:50:18.7174476Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-10-10T18:50:18.8977336Z Collecting packaging>=22 (from pytest>=7.0.0->persisthunt==0.1.0)
+2026-10-10T18:50:18.8985355Z   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-10T18:50:18.9179537Z Collecting pluggy<2,>=1.5 (from pytest>=7.0.0->persisthunt==0.1.0)
+2026-10-10T18:50:18.9304652Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-10-10T18:50:18.9554780Z Collecting pygments>=2.7.2 (from pytest>=7.0.0->persisthunt==0.1.0)
+2026-10-10T18:50:18.9683086Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-10T18:50:19.0003504Z Collecting tomli>=1 (from pytest>=7.0.0->persisthunt==0.1.0)
+2026-10-10T18:50:19.0129507Z   Downloading tomli-2.5.0-py3-none-any.whl.metadata (10 kB)
+2026-10-10T18:50:19.0377684Z Collecting typing-extensions>=4.6.0 (from exceptiongroup>=1->pytest>=7.0.0->persisthunt==0.1.0)
+2026-10-10T18:50:19.0502091Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-10T18:50:19.0655440Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-10-10T18:50:19.1255771Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-10-10T18:50:19.1393994Z Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+2026-10-10T18:50:19.1532224Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-10-10T18:50:19.1552849Z Using cached packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-10T18:50:19.1677403Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-10T18:50:19.2071744Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 37.4 MB/s  0:00:00
+2026-10-10T18:50:19.2195631Z Downloading tomli-2.5.0-py3-none-any.whl (14 kB)
+2026-10-10T18:50:19.2333322Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-10T18:50:19.2503017Z Building wheels for collected packages: persisthunt
+2026-10-10T18:50:19.2510848Z   Building editable for persisthunt (pyproject.toml): started
+2026-10-10T18:50:19.3843802Z   Building editable for persisthunt (pyproject.toml): finished with status 'done'
+2026-10-10T18:50:19.3847815Z   Created wheel for persisthunt: filename=persisthunt-0.1.0-0.editable-py3-none-any.whl size=10440 sha256=a2b7ea180bf90686556ba6885b88c2ce3b3f0e118cdef402964f56746a91baa9
+2026-10-10T18:50:19.3849225Z   Stored in directory: /tmp/pip-ephem-wheel-cache-mg73qc28/wheels/66/7b/fb/d651743596f27dc684353e092cd0e8b3946583643159c3c742
+2026-10-10T18:50:19.3862296Z Successfully built persisthunt
+2026-10-10T18:50:19.4026528Z Installing collected packages: typing-extensions, tomli, pygments, pluggy, persisthunt, packaging, iniconfig, exceptiongroup, pytest
+2026-10-10T18:50:20.1595854Z 
+2026-10-10T18:50:20.1608380Z Successfully installed exceptiongroup-1.3.1 iniconfig-2.3.1 packaging-26.3 persisthunt-0.1.0 pluggy-1.6.0 pygments-2.21.0 pytest-9.1.1 tomli-2.5.0 typing-extensions-4.16.0

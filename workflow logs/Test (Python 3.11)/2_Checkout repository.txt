@@ -1,0 +1,73 @@
+﻿2026-10-10T18:50:13.4105784Z ##[group]Run actions/checkout@v4
+2026-10-10T18:50:13.4106716Z with:
+2026-10-10T18:50:13.4107190Z   repository: 0xRaiven/persistHunt
+2026-10-10T18:50:13.4111073Z   token: ***
+2026-10-10T18:50:13.4111513Z   ssh-strict: true
+2026-10-10T18:50:13.4111949Z   ssh-user: git
+2026-10-10T18:50:13.4112399Z   persist-credentials: true
+2026-10-10T18:50:13.4112889Z   clean: true
+2026-10-10T18:50:13.4113333Z   sparse-checkout-cone-mode: true
+2026-10-10T18:50:13.4114054Z   fetch-depth: 1
+2026-10-10T18:50:13.4114503Z   fetch-tags: false
+2026-10-10T18:50:13.4114966Z   show-progress: true
+2026-10-10T18:50:13.4115420Z   lfs: false
+2026-10-10T18:50:13.4115836Z   submodules: false
+2026-10-10T18:50:13.4116289Z   set-safe-directory: true
+2026-10-10T18:50:13.4116803Z   allow-unsafe-pr-checkout: false
+2026-10-10T18:50:13.4117583Z ##[endgroup]
+2026-10-10T18:50:13.5183617Z Syncing repository: 0xRaiven/persistHunt
+2026-10-10T18:50:13.5185889Z ##[group]Getting Git version info
+2026-10-10T18:50:13.5187130Z Working directory is '/home/runner/work/persistHunt/persistHunt'
+2026-10-10T18:50:13.5188331Z [command]/usr/bin/git version
+2026-10-10T18:50:13.5295987Z git version 2.55.0
+2026-10-10T18:50:13.5311643Z ##[endgroup]
+2026-10-10T18:50:13.5325315Z Temporarily overriding HOME='/home/runner/work/_temp/d37ad1ac-77b7-442d-be9e-9354a656c7aa' before making global git config changes
+2026-10-10T18:50:13.5330566Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-10T18:50:13.5332458Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/persistHunt/persistHunt
+2026-10-10T18:50:13.5389679Z Deleting the contents of '/home/runner/work/persistHunt/persistHunt'
+2026-10-10T18:50:13.5393524Z ##[group]Initializing the repository
+2026-10-10T18:50:13.5398837Z [command]/usr/bin/git init /home/runner/work/persistHunt/persistHunt
+2026-10-10T18:50:13.5538389Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-10T18:50:13.5540384Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-10T18:50:13.5542582Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-10T18:50:13.5543604Z hint: call:
+2026-10-10T18:50:13.5544608Z hint:
+2026-10-10T18:50:13.5545577Z hint: 	git config --global init.defaultBranch <name>
+2026-10-10T18:50:13.5546308Z hint:
+2026-10-10T18:50:13.5546982Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-10T18:50:13.5548075Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-10T18:50:13.5548952Z hint:
+2026-10-10T18:50:13.5549431Z hint: 	git branch -m <name>
+2026-10-10T18:50:13.5550278Z hint:
+2026-10-10T18:50:13.5551303Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-10T18:50:13.5552898Z Initialized empty Git repository in /home/runner/work/persistHunt/persistHunt/.git/
+2026-10-10T18:50:13.5555177Z [command]/usr/bin/git remote add origin https://github.com/0xRaiven/persistHunt
+2026-10-10T18:50:13.5610539Z ##[endgroup]
+2026-10-10T18:50:13.5611587Z ##[group]Disabling automatic garbage collection
+2026-10-10T18:50:13.5615888Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-10T18:50:13.5651271Z ##[endgroup]
+2026-10-10T18:50:13.5652197Z ##[group]Setting up auth
+2026-10-10T18:50:13.5659700Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-10T18:50:13.5697217Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-10T18:50:13.6114301Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-10T18:50:13.6159544Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-10T18:50:13.6397942Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-10T18:50:13.6437215Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-10T18:50:13.6675205Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-10T18:50:13.6719100Z ##[endgroup]
+2026-10-10T18:50:13.6720138Z ##[group]Fetching the repository
+2026-10-10T18:50:13.6730887Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +38ec3ef6d3242dfd0f13317fb84c335d5950b7e2:refs/remotes/origin/main
+2026-10-10T18:50:14.0145816Z From https://github.com/0xRaiven/persistHunt
+2026-10-10T18:50:14.0147423Z  * [new ref]         38ec3ef6d3242dfd0f13317fb84c335d5950b7e2 -> origin/main
+2026-10-10T18:50:14.0150795Z ##[endgroup]
+2026-10-10T18:50:14.0152000Z ##[group]Determining the checkout info
+2026-10-10T18:50:14.0153461Z ##[endgroup]
+2026-10-10T18:50:14.0160480Z [command]/usr/bin/git sparse-checkout disable
+2026-10-10T18:50:14.0223711Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-10T18:50:14.0259798Z ##[group]Checking out the ref
+2026-10-10T18:50:14.0266125Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-10T18:50:14.0379344Z Switched to a new branch 'main'
+2026-10-10T18:50:14.0385302Z branch 'main' set up to track 'origin/main'.
+2026-10-10T18:50:14.0393314Z ##[endgroup]
+2026-10-10T18:50:14.0451841Z [command]/usr/bin/git log -1 --format=%H
+2026-10-10T18:50:14.0485291Z 38ec3ef6d3242dfd0f13317fb84c335d5950b7e2

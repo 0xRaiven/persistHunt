@@ -1,0 +1,661 @@
+﻿2026-10-10T18:50:13.2933890Z Current runner version: '2.337.0'
+2026-10-10T18:50:13.2957378Z ##[group]Runner Image Provisioner
+2026-10-10T18:50:13.2958217Z Hosted Compute Agent
+2026-10-10T18:50:13.2958886Z Version: 20261002.596
+2026-10-10T18:50:13.2959556Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-10T18:50:13.2960696Z Build Date: 2026-10-02T22:28:27Z
+2026-10-10T18:50:13.2961406Z Worker ID: {0fff0c0b-b7cb-4268-8c09-48bdd35120c1}
+2026-10-10T18:50:13.2962120Z Region: westus
+2026-10-10T18:50:13.2962701Z Cloud: Azure
+2026-10-10T18:50:13.2963301Z ##[endgroup]
+2026-10-10T18:50:13.2964883Z ##[group]Operating System
+2026-10-10T18:50:13.2965618Z Ubuntu
+2026-10-10T18:50:13.2966136Z 24.04.5
+2026-10-10T18:50:13.2966672Z LTS
+2026-10-10T18:50:13.2967228Z ##[endgroup]
+2026-10-10T18:50:13.2967860Z ##[group]Runner Image
+2026-10-10T18:50:13.2968520Z Image: ubuntu-24.04
+2026-10-10T18:50:13.2969086Z Version: 20261004.327.1
+2026-10-10T18:50:13.2970685Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-10T18:50:13.2972287Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-10T18:50:13.2973348Z ##[endgroup]
+2026-10-10T18:50:13.2974412Z ##[group]GITHUB_TOKEN Permissions
+2026-10-10T18:50:13.2976698Z Contents: read
+2026-10-10T18:50:13.2977298Z Metadata: read
+2026-10-10T18:50:13.2977919Z ##[endgroup]
+2026-10-10T18:50:13.2980295Z Secret source: Actions
+2026-10-10T18:50:13.2981372Z Cache mode: write
+2026-10-10T18:50:13.2982093Z Prepare workflow directory
+2026-10-10T18:50:13.3317040Z Prepare all required actions
+2026-10-10T18:50:13.3365237Z Getting action download info
+2026-10-10T18:50:13.6923145Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-10T18:50:13.7827413Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-10T18:50:13.9747489Z Complete job name: Test (Python 3.9)
+2026-10-10T18:50:14.0476520Z ##[group]Run actions/checkout@v4
+2026-10-10T18:50:14.0477409Z with:
+2026-10-10T18:50:14.0477855Z   repository: 0xRaiven/persistHunt
+2026-10-10T18:50:14.0482352Z   token: ***
+2026-10-10T18:50:14.0482794Z   ssh-strict: true
+2026-10-10T18:50:14.0483229Z   ssh-user: git
+2026-10-10T18:50:14.0483678Z   persist-credentials: true
+2026-10-10T18:50:14.0484166Z   clean: true
+2026-10-10T18:50:14.0484627Z   sparse-checkout-cone-mode: true
+2026-10-10T18:50:14.0485138Z   fetch-depth: 1
+2026-10-10T18:50:14.0485597Z   fetch-tags: false
+2026-10-10T18:50:14.0486039Z   show-progress: true
+2026-10-10T18:50:14.0486486Z   lfs: false
+2026-10-10T18:50:14.0486892Z   submodules: false
+2026-10-10T18:50:14.0487362Z   set-safe-directory: true
+2026-10-10T18:50:14.0487863Z   allow-unsafe-pr-checkout: false
+2026-10-10T18:50:14.0488716Z ##[endgroup]
+2026-10-10T18:50:14.1569469Z Syncing repository: 0xRaiven/persistHunt
+2026-10-10T18:50:14.1571851Z ##[group]Getting Git version info
+2026-10-10T18:50:14.1572750Z Working directory is '/home/runner/work/persistHunt/persistHunt'
+2026-10-10T18:50:14.1573994Z [command]/usr/bin/git version
+2026-10-10T18:50:14.1633577Z git version 2.55.0
+2026-10-10T18:50:14.1656230Z ##[endgroup]
+2026-10-10T18:50:14.1673521Z Temporarily overriding HOME='/home/runner/work/_temp/f5ed3b75-40fb-4a2b-a7c0-29c221ece9b6' before making global git config changes
+2026-10-10T18:50:14.1675684Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-10T18:50:14.1677676Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/persistHunt/persistHunt
+2026-10-10T18:50:14.1811300Z Deleting the contents of '/home/runner/work/persistHunt/persistHunt'
+2026-10-10T18:50:14.1819596Z ##[group]Initializing the repository
+2026-10-10T18:50:14.1828156Z [command]/usr/bin/git init /home/runner/work/persistHunt/persistHunt
+2026-10-10T18:50:14.1985925Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-10T18:50:14.1987583Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-10T18:50:14.1989474Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-10T18:50:14.1990966Z hint: call:
+2026-10-10T18:50:14.1991610Z hint:
+2026-10-10T18:50:14.1992420Z hint: 	git config --global init.defaultBranch <name>
+2026-10-10T18:50:14.1993436Z hint:
+2026-10-10T18:50:14.1994366Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-10T18:50:14.1995993Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-10T18:50:14.1997196Z hint:
+2026-10-10T18:50:14.1997842Z hint: 	git branch -m <name>
+2026-10-10T18:50:14.1998626Z hint:
+2026-10-10T18:50:14.1999638Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-10T18:50:14.2001693Z Initialized empty Git repository in /home/runner/work/persistHunt/persistHunt/.git/
+2026-10-10T18:50:14.2004391Z [command]/usr/bin/git remote add origin https://github.com/0xRaiven/persistHunt
+2026-10-10T18:50:14.2058205Z ##[endgroup]
+2026-10-10T18:50:14.2059614Z ##[group]Disabling automatic garbage collection
+2026-10-10T18:50:14.2061861Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-10T18:50:14.2097526Z ##[endgroup]
+2026-10-10T18:50:14.2098680Z ##[group]Setting up auth
+2026-10-10T18:50:14.2111994Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-10T18:50:14.2142385Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-10T18:50:14.2514650Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-10T18:50:14.2552642Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-10T18:50:14.2789084Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-10T18:50:14.2824347Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-10T18:50:14.3048019Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-10T18:50:14.3090326Z ##[endgroup]
+2026-10-10T18:50:14.3091337Z ##[group]Fetching the repository
+2026-10-10T18:50:14.3100948Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +38ec3ef6d3242dfd0f13317fb84c335d5950b7e2:refs/remotes/origin/main
+2026-10-10T18:50:14.7148167Z From https://github.com/0xRaiven/persistHunt
+2026-10-10T18:50:14.7149543Z  * [new ref]         38ec3ef6d3242dfd0f13317fb84c335d5950b7e2 -> origin/main
+2026-10-10T18:50:14.7162624Z ##[endgroup]
+2026-10-10T18:50:14.7163394Z ##[group]Determining the checkout info
+2026-10-10T18:50:14.7164230Z ##[endgroup]
+2026-10-10T18:50:14.7166781Z [command]/usr/bin/git sparse-checkout disable
+2026-10-10T18:50:14.7222615Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-10T18:50:14.7257589Z ##[group]Checking out the ref
+2026-10-10T18:50:14.7263283Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-10T18:50:14.7371356Z Switched to a new branch 'main'
+2026-10-10T18:50:14.7377837Z branch 'main' set up to track 'origin/main'.
+2026-10-10T18:50:14.7383259Z ##[endgroup]
+2026-10-10T18:50:14.7426310Z [command]/usr/bin/git log -1 --format=%H
+2026-10-10T18:50:14.7453860Z 38ec3ef6d3242dfd0f13317fb84c335d5950b7e2
+2026-10-10T18:50:14.7744771Z ##[group]Run actions/setup-python@v5
+2026-10-10T18:50:14.7745365Z with:
+2026-10-10T18:50:14.7745783Z   python-version: 3.9
+2026-10-10T18:50:14.7746244Z   check-latest: false
+2026-10-10T18:50:14.7750298Z   token: ***
+2026-10-10T18:50:14.7750741Z   update-environment: true
+2026-10-10T18:50:14.7751242Z   allow-prereleases: false
+2026-10-10T18:50:14.7751725Z   freethreaded: false
+2026-10-10T18:50:14.7752384Z ##[endgroup]
+2026-10-10T18:50:14.9149575Z ##[group]Installed versions
+2026-10-10T18:50:14.9227129Z Version 3.9 was not found in the local cache
+2026-10-10T18:50:14.9357268Z (node:2301) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-10T18:50:14.9358874Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-10T18:50:15.6966541Z Version 3.9 is available for downloading
+2026-10-10T18:50:15.6967705Z Download from "https://github.com/actions/python-versions/releases/download/3.9.25-19039189640/python-3.9.25-linux-24.04-x64.tar.gz"
+2026-10-10T18:50:16.4543386Z Extract downloaded archive
+2026-10-10T18:50:16.4700426Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/ff34db09-19bc-4d70-a5e2-167b06ba5472 -f /home/runner/work/_temp/40fb4699-f188-4999-a19f-d77cb7a4b45e
+2026-10-10T18:50:17.8316779Z Execute installation script
+2026-10-10T18:50:17.8443204Z Check if Python hostedtoolcache folder exist...
+2026-10-10T18:50:17.8444022Z Create Python 3.9.25 folder
+2026-10-10T18:50:17.8460786Z Copy Python binaries to hostedtoolcache folder
+2026-10-10T18:50:18.3159044Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-10-10T18:50:18.3199724Z Upgrading pip...
+2026-10-10T18:50:20.5109522Z Looking in links: /tmp/tmp8koiixtw
+2026-10-10T18:50:20.5113942Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (79.0.1)
+2026-10-10T18:50:20.5119287Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (23.0.1)
+2026-10-10T18:50:21.6885974Z Collecting pip
+2026-10-10T18:50:21.7208224Z Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+2026-10-10T18:50:21.7620591Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 47.2 MB/s eta 0:00:00
+2026-10-10T18:50:21.7621700Z 
+2026-10-10T18:50:21.8254856Z Installing collected packages: pip
+2026-10-10T18:50:21.8255917Z Attempting uninstall: pip
+2026-10-10T18:50:21.8262938Z Found existing installation: pip 23.0.1
+2026-10-10T18:50:22.0087252Z Uninstalling pip-23.0.1:
+2026-10-10T18:50:22.0161269Z Successfully uninstalled pip-23.0.1
+2026-10-10T18:50:22.8650013Z Successfully installed pip-26.0.1
+2026-10-10T18:50:22.9193516Z Create complete file
+2026-10-10T18:50:22.9240597Z Successfully set up CPython (3.9.25)
+2026-10-10T18:50:22.9244016Z ##[endgroup]
+2026-10-10T18:50:22.9490367Z ##[group]Run python -m pip install --upgrade pip
+2026-10-10T18:50:22.9490866Z [36;1mpython -m pip install --upgrade pip[0m
+2026-10-10T18:50:22.9491216Z [36;1mpip install -e ".[dev]"[0m
+2026-10-10T18:50:22.9742501Z shell: /usr/bin/bash -e {0}
+2026-10-10T18:50:22.9742954Z env:
+2026-10-10T18:50:22.9743398Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-10-10T18:50:22.9744118Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+2026-10-10T18:50:22.9744814Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-10-10T18:50:22.9745461Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-10-10T18:50:22.9746079Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-10-10T18:50:22.9746642Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+2026-10-10T18:50:22.9747078Z ##[endgroup]
+2026-10-10T18:50:23.2861420Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (26.0.1)
+2026-10-10T18:50:23.7950119Z Obtaining file:///home/runner/work/persistHunt/persistHunt
+2026-10-10T18:50:23.7982308Z   Installing build dependencies: started
+2026-10-10T18:50:24.5704570Z   Installing build dependencies: finished with status 'done'
+2026-10-10T18:50:24.5714954Z   Checking if build backend supports build_editable: started
+2026-10-10T18:50:24.8782693Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-10-10T18:50:24.8794757Z   Getting requirements to build editable: started
+2026-10-10T18:50:25.1916623Z   Getting requirements to build editable: finished with status 'done'
+2026-10-10T18:50:25.1930135Z   Preparing editable metadata (pyproject.toml): started
+2026-10-10T18:50:25.3802616Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-10-10T18:50:25.4668274Z Collecting pytest>=7.0.0 (from persisthunt==0.1.0)
+2026-10-10T18:50:25.4971759Z   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+2026-10-10T18:50:25.5143744Z Collecting exceptiongroup>=1 (from pytest>=7.0.0->persisthunt==0.1.0)
+2026-10-10T18:50:25.5180877Z   Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+2026-10-10T18:50:25.5291603Z Collecting iniconfig>=1 (from pytest>=7.0.0->persisthunt==0.1.0)
+2026-10-10T18:50:25.5331858Z   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+2026-10-10T18:50:25.5532021Z Collecting packaging>=20 (from pytest>=7.0.0->persisthunt==0.1.0)
+2026-10-10T18:50:25.5550811Z   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-10T18:50:25.5803493Z Collecting pluggy<2,>=1.5 (from pytest>=7.0.0->persisthunt==0.1.0)
+2026-10-10T18:50:25.5849475Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-10-10T18:50:25.6066578Z Collecting pygments>=2.7.2 (from pytest>=7.0.0->persisthunt==0.1.0)
+2026-10-10T18:50:25.6105130Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-10T18:50:25.6457535Z Collecting tomli>=1 (from pytest>=7.0.0->persisthunt==0.1.0)
+2026-10-10T18:50:25.6501595Z   Downloading tomli-2.5.0-py3-none-any.whl.metadata (10 kB)
+2026-10-10T18:50:25.6693508Z Collecting typing-extensions>=4.6.0 (from exceptiongroup>=1->pytest>=7.0.0->persisthunt==0.1.0)
+2026-10-10T18:50:25.6737748Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-10T18:50:25.6818949Z Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+2026-10-10T18:50:25.6961886Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-10-10T18:50:25.7023970Z Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+2026-10-10T18:50:25.7079924Z Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+2026-10-10T18:50:25.7117467Z Using cached packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-10T18:50:25.7159225Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-10T18:50:25.7307638Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 95.3 MB/s  0:00:00
+2026-10-10T18:50:25.7347563Z Downloading tomli-2.5.0-py3-none-any.whl (14 kB)
+2026-10-10T18:50:25.7402658Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-10T18:50:25.7546480Z Building wheels for collected packages: persisthunt
+2026-10-10T18:50:25.7555414Z   Building editable for persisthunt (pyproject.toml): started
+2026-10-10T18:50:25.9763549Z   Building editable for persisthunt (pyproject.toml): finished with status 'done'
+2026-10-10T18:50:25.9775607Z   Created wheel for persisthunt: filename=persisthunt-0.1.0-0.editable-py3-none-any.whl size=10440 sha256=aa3f60840791115a7dcde665c0e7fd5d3c5af98aaaf80f32437a0a94fc7b1026
+2026-10-10T18:50:25.9778953Z   Stored in directory: /tmp/pip-ephem-wheel-cache-0r6q0agq/wheels/a0/8c/d3/cf7cda93081c5b33263b37f4f7ba41c87601f87f7dfc27013b
+2026-10-10T18:50:25.9821992Z Successfully built persisthunt
+2026-10-10T18:50:26.0057572Z Installing collected packages: typing-extensions, tomli, pygments, pluggy, persisthunt, packaging, iniconfig, exceptiongroup, pytest
+2026-10-10T18:50:27.0231811Z 
+2026-10-10T18:50:27.0259055Z Successfully installed exceptiongroup-1.3.1 iniconfig-2.1.0 packaging-26.3 persisthunt-0.1.0 pluggy-1.6.0 pygments-2.21.0 pytest-8.4.2 tomli-2.5.0 typing-extensions-4.16.0
+2026-10-10T18:50:27.0984355Z ##[group]Run pytest -v
+2026-10-10T18:50:27.0984648Z [36;1mpytest -v[0m
+2026-10-10T18:50:27.1050850Z shell: /usr/bin/bash -e {0}
+2026-10-10T18:50:27.1051133Z env:
+2026-10-10T18:50:27.1051437Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-10-10T18:50:27.1051950Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+2026-10-10T18:50:27.1052460Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-10-10T18:50:27.1053094Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-10-10T18:50:27.1053556Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-10-10T18:50:27.1054016Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+2026-10-10T18:50:27.1054406Z ##[endgroup]
+2026-10-10T18:50:27.3227677Z ============================= test session starts ==============================
+2026-10-10T18:50:27.3229071Z platform linux -- Python 3.9.25, pytest-8.4.2, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.9.25/x64/bin/python
+2026-10-10T18:50:27.3230399Z cachedir: .pytest_cache
+2026-10-10T18:50:27.3230990Z rootdir: /home/runner/work/persistHunt/persistHunt
+2026-10-10T18:50:27.3231704Z configfile: pyproject.toml
+2026-10-10T18:50:27.4864688Z collecting ... collected 183 items
+2026-10-10T18:50:27.4865071Z 
+2026-10-10T18:50:27.4887781Z tests/test_account_detector.py::TestAccountDetector::test_account_with_hidden_home_directory PASSED [  0%]
+2026-10-10T18:50:27.4906558Z tests/test_account_detector.py::TestAccountDetector::test_account_with_non_standard_shell_binary PASSED [  1%]
+2026-10-10T18:50:27.4924436Z tests/test_account_detector.py::TestAccountDetector::test_account_with_suspicious_tmp_home_directory PASSED [  1%]
+2026-10-10T18:50:27.4940045Z tests/test_account_detector.py::TestAccountDetector::test_empty_database_returns_empty_collection PASSED [  2%]
+2026-10-10T18:50:27.4959507Z tests/test_account_detector.py::TestAccountDetector::test_empty_password_in_shadow PASSED [  2%]
+2026-10-10T18:50:27.4974287Z tests/test_account_detector.py::TestAccountDetector::test_missing_passwd_file_handled_safely PASSED [  3%]
+2026-10-10T18:50:27.4992218Z tests/test_account_detector.py::TestAccountDetector::test_non_root_uid_0_account PASSED [  3%]
+2026-10-10T18:50:27.5011487Z tests/test_account_detector.py::TestAccountDetector::test_non_standard_account_in_admin_group PASSED [  4%]
+2026-10-10T18:50:27.5034005Z tests/test_account_detector.py::TestAccountDetector::test_normal_standard_accounts_produce_zero_findings PASSED [  4%]
+2026-10-10T18:50:27.5053073Z tests/test_account_detector.py::TestAccountDetector::test_password_hash_privacy_shielding PASSED [  5%]
+2026-10-10T18:50:27.5073612Z tests/test_account_detector.py::TestAccountDetector::test_read_only_safety_preserves_account_files PASSED [  6%]
+2026-10-10T18:50:27.5096336Z tests/test_account_detector.py::TestAccountDetector::test_real_system_account_scan_does_not_crash PASSED [  6%]
+2026-10-10T18:50:27.5115820Z tests/test_account_detector.py::TestAccountDetector::test_recently_created_account PASSED [  7%]
+2026-10-10T18:50:27.5134696Z tests/test_account_detector.py::TestAccountDetector::test_service_account_with_interactive_login_shell PASSED [  7%]
+2026-10-10T18:50:27.7516382Z tests/test_cli.py::TestCLI::test_cli_category_filter PASSED              [  8%]
+2026-10-10T18:50:27.7818920Z tests/test_cli.py::TestCLI::test_cli_comma_separated_categories PASSED   [  8%]
+2026-10-10T18:50:27.7852223Z tests/test_cli.py::TestCLI::test_cli_exit_zero_flag PASSED               [  9%]
+2026-10-10T18:50:27.7879004Z tests/test_cli.py::TestCLI::test_cli_help PASSED                         [  9%]
+2026-10-10T18:50:27.7901343Z tests/test_cli.py::TestCLI::test_cli_invalid_category_returns_error PASSED [ 10%]
+2026-10-10T18:50:27.7923840Z tests/test_cli.py::TestCLI::test_cli_no_arguments_shows_help PASSED      [ 10%]
+2026-10-10T18:50:27.7980938Z tests/test_cli.py::TestCLI::test_cli_progress_messages_to_stderr PASSED  [ 11%]
+2026-10-10T18:50:27.8088741Z tests/test_cli.py::TestCLI::test_cli_save_output_json_and_html PASSED    [ 12%]
+2026-10-10T18:50:27.8145803Z tests/test_cli.py::TestCLI::test_cli_scan_json_output PASSED             [ 12%]
+2026-10-10T18:50:27.8169141Z tests/test_cli.py::TestCLI::test_cli_severity_filter PASSED              [ 13%]
+2026-10-10T18:50:27.8189257Z tests/test_cli.py::TestCLI::test_cli_version_flag PASSED                 [ 13%]
+2026-10-10T18:50:27.8212891Z tests/test_cli.py::TestCLI::test_cli_version_subcommand PASSED           [ 14%]
+2026-10-10T18:50:27.8238842Z tests/test_cron_detector.py::TestCronDetector::test_benign_administrative_cron_entries PASSED [ 14%]
+2026-10-10T18:50:27.8259571Z tests/test_cron_detector.py::TestCronDetector::test_binary_executable_in_cron_script_dir PASSED [ 15%]
+2026-10-10T18:50:27.8279126Z tests/test_cron_detector.py::TestCronDetector::test_broken_symlink_in_cron_directory PASSED [ 15%]
+2026-10-10T18:50:27.8298178Z tests/test_cron_detector.py::TestCronDetector::test_empty_system_returns_empty_collection PASSED [ 16%]
+2026-10-10T18:50:27.8319041Z tests/test_cron_detector.py::TestCronDetector::test_hidden_file_in_cron_directory PASSED [ 16%]
+2026-10-10T18:50:27.8338998Z tests/test_cron_detector.py::TestCronDetector::test_malformed_cron_entries PASSED [ 17%]
+2026-10-10T18:50:27.8356847Z tests/test_cron_detector.py::TestCronDetector::test_missing_directories_do_not_crash PASSED [ 18%]
+2026-10-10T18:50:27.8378985Z tests/test_cron_detector.py::TestCronDetector::test_permission_denied_handling PASSED [ 18%]
+2026-10-10T18:50:27.8399536Z tests/test_cron_detector.py::TestCronDetector::test_read_only_safety_preserves_files PASSED [ 19%]
+2026-10-10T18:50:27.8449999Z tests/test_cron_detector.py::TestCronDetector::test_real_system_scan_does_not_crash PASSED [ 19%]
+2026-10-10T18:50:27.8472002Z tests/test_cron_detector.py::TestCronDetector::test_root_prefix_default_paths PASSED [ 20%]
+2026-10-10T18:50:27.8492662Z tests/test_cron_detector.py::TestCronDetector::test_scheduled_script_directory_indicators PASSED [ 20%]
+2026-10-10T18:50:27.8513480Z tests/test_cron_detector.py::TestCronDetector::test_suspicious_base64_decode_indicator PASSED [ 21%]
+2026-10-10T18:50:27.8533862Z tests/test_cron_detector.py::TestCronDetector::test_suspicious_download_pipe_indicator PASSED [ 21%]
+2026-10-10T18:50:27.8553481Z tests/test_cron_detector.py::TestCronDetector::test_suspicious_env_var_in_crontab PASSED [ 22%]
+2026-10-10T18:50:27.8574113Z tests/test_cron_detector.py::TestCronDetector::test_suspicious_inline_script_execution PASSED [ 22%]
+2026-10-10T18:50:27.8594225Z tests/test_cron_detector.py::TestCronDetector::test_suspicious_netcat_and_socat_indicators PASSED [ 23%]
+2026-10-10T18:50:27.8614058Z tests/test_cron_detector.py::TestCronDetector::test_suspicious_network_socket_reverse_shell PASSED [ 24%]
+2026-10-10T18:50:27.8634219Z tests/test_cron_detector.py::TestCronDetector::test_suspicious_standalone_curl_wget_indicator PASSED [ 24%]
+2026-10-10T18:50:27.8655917Z tests/test_cron_detector.py::TestCronDetector::test_suspicious_temp_directory_execution PASSED [ 25%]
+2026-10-10T18:50:27.8680429Z tests/test_cron_detector.py::TestCronDetector::test_unreadable_individual_crontab_file PASSED [ 25%]
+2026-10-10T18:50:27.8690220Z tests/test_detectors.py::TestDetectorArchitecture::test_cannot_instantiate_abstract_base_detector PASSED [ 26%]
+2026-10-10T18:50:27.8700159Z tests/test_detectors.py::TestDetectorArchitecture::test_custom_detector_subclass PASSED [ 26%]
+2026-10-10T18:50:27.8709867Z tests/test_findings.py::TestFinding::test_json_serialization PASSED      [ 27%]
+2026-10-10T18:50:27.8718338Z tests/test_findings.py::TestFinding::test_optional_fields PASSED         [ 27%]
+2026-10-10T18:50:27.8726946Z tests/test_findings.py::TestFinding::test_serialization_to_dict PASSED   [ 28%]
+2026-10-10T18:50:27.8735810Z tests/test_findings.py::TestFinding::test_valid_finding_creation PASSED  [ 28%]
+2026-10-10T18:50:27.8744387Z tests/test_findings.py::TestFinding::test_validation_empty_id PASSED     [ 29%]
+2026-10-10T18:50:27.8752768Z tests/test_findings.py::TestFinding::test_validation_empty_title PASSED  [ 30%]
+2026-10-10T18:50:27.8761942Z tests/test_findings.py::TestFinding::test_validation_invalid_severity PASSED [ 30%]
+2026-10-10T18:50:27.8770224Z tests/test_findings.py::TestFindingCollection::test_add_and_count PASSED [ 31%]
+2026-10-10T18:50:27.8778796Z tests/test_findings.py::TestFindingCollection::test_clear PASSED         [ 31%]
+2026-10-10T18:50:27.8787306Z tests/test_findings.py::TestFindingCollection::test_filter_by_category PASSED [ 32%]
+2026-10-10T18:50:27.8796072Z tests/test_findings.py::TestFindingCollection::test_filter_by_severity PASSED [ 32%]
+2026-10-10T18:50:27.8808912Z tests/test_findings.py::TestFindingCollection::test_iterate PASSED       [ 33%]
+2026-10-10T18:50:27.8820420Z tests/test_findings.py::TestFindingCollection::test_severity_counts PASSED [ 33%]
+2026-10-10T18:50:27.8830076Z tests/test_findings.py::TestFindingCollection::test_to_dict PASSED       [ 34%]
+2026-10-10T18:50:27.8856888Z tests/test_process_detector.py::TestProcessDetector::test_credential_sanitization_privacy PASSED [ 34%]
+2026-10-10T18:50:27.8873579Z tests/test_process_detector.py::TestProcessDetector::test_deleted_binary_execution PASSED [ 35%]
+2026-10-10T18:50:27.8885007Z tests/test_process_detector.py::TestProcessDetector::test_empty_proc_returns_empty_collection PASSED [ 36%]
+2026-10-10T18:50:27.8901643Z tests/test_process_detector.py::TestProcessDetector::test_encoded_payload_execution PASSED [ 36%]
+2026-10-10T18:50:27.8918099Z tests/test_process_detector.py::TestProcessDetector::test_inline_interpreter_execution PASSED [ 37%]
+2026-10-10T18:50:27.8936864Z tests/test_process_detector.py::TestProcessDetector::test_interactive_netcat_reverse_shell PASSED [ 37%]
+2026-10-10T18:50:27.8949051Z tests/test_process_detector.py::TestProcessDetector::test_missing_proc_dir_handling PASSED [ 38%]
+2026-10-10T18:50:27.8970793Z tests/test_process_detector.py::TestProcessDetector::test_normal_process_produces_zero_findings PASSED [ 38%]
+2026-10-10T18:50:27.8988101Z tests/test_process_detector.py::TestProcessDetector::test_piped_download_execution PASSED [ 39%]
+2026-10-10T18:50:27.9005371Z tests/test_process_detector.py::TestProcessDetector::test_process_cmdline_in_var_tmp PASSED [ 39%]
+2026-10-10T18:50:27.9022836Z tests/test_process_detector.py::TestProcessDetector::test_process_executing_from_hidden_directory PASSED [ 40%]
+2026-10-10T18:50:27.9039946Z tests/test_process_detector.py::TestProcessDetector::test_process_executing_from_tmp_directory PASSED [ 40%]
+2026-10-10T18:50:27.9057321Z tests/test_process_detector.py::TestProcessDetector::test_read_only_safety_preserves_proc_files PASSED [ 41%]
+2026-10-10T18:50:27.9294075Z tests/test_process_detector.py::TestProcessDetector::test_real_system_proc_scan_does_not_crash PASSED [ 42%]
+2026-10-10T18:50:27.9310949Z tests/test_process_detector.py::TestProcessDetector::test_reverse_shell_socket_redirection PASSED [ 42%]
+2026-10-10T18:50:27.9332840Z tests/test_process_detector.py::TestProcessDetector::test_web_server_spawning_interactive_shell PASSED [ 43%]
+2026-10-10T18:50:27.9344444Z tests/test_reporting.py::TestReporting::test_empty_findings_report PASSED [ 43%]
+2026-10-10T18:50:27.9356243Z tests/test_reporting.py::TestReporting::test_html_report_generation PASSED [ 44%]
+2026-10-10T18:50:27.9369126Z tests/test_reporting.py::TestReporting::test_json_schema_structure PASSED [ 44%]
+2026-10-10T18:50:27.9386518Z tests/test_reporting.py::TestReporting::test_save_json_and_save_html PASSED [ 45%]
+2026-10-10T18:50:27.9398139Z tests/test_reporting.py::TestReporting::test_sensitive_information_handling PASSED [ 45%]
+2026-10-10T18:50:27.9409160Z tests/test_reporting.py::TestReporting::test_terminal_summary_output_exact_layout PASSED [ 46%]
+2026-10-10T18:50:27.9421622Z tests/test_reporting.py::TestReporting::test_terminal_summary_with_details PASSED [ 46%]
+2026-10-10T18:50:27.9431905Z tests/test_risk_scoring.py::TestRiskScoring::test_all_critical_reaches_score_ceiling PASSED [ 47%]
+2026-10-10T18:50:27.9440551Z tests/test_risk_scoring.py::TestRiskScoring::test_all_informational_findings PASSED [ 48%]
+2026-10-10T18:50:27.9449400Z tests/test_risk_scoring.py::TestRiskScoring::test_custom_weights_and_limits PASSED [ 48%]
+2026-10-10T18:50:27.9482693Z tests/test_risk_scoring.py::TestRiskScoring::test_deterministic_scoring PASSED [ 49%]
+2026-10-10T18:50:27.9491516Z tests/test_risk_scoring.py::TestRiskScoring::test_empty_collection PASSED [ 49%]
+2026-10-10T18:50:27.9500301Z tests/test_risk_scoring.py::TestRiskScoring::test_explainability_output PASSED [ 50%]
+2026-10-10T18:50:27.9509218Z tests/test_risk_scoring.py::TestRiskScoring::test_invalid_parameters_raise_value_error PASSED [ 50%]
+2026-10-10T18:50:27.9518240Z tests/test_risk_scoring.py::TestRiskScoring::test_json_serialization PASSED [ 51%]
+2026-10-10T18:50:27.9527450Z tests/test_risk_scoring.py::TestRiskScoring::test_mixed_severity_matches_prompt_example PASSED [ 51%]
+2026-10-10T18:50:27.9536423Z tests/test_risk_scoring.py::TestRiskScoring::test_multiple_findings_same_severity PASSED [ 52%]
+2026-10-10T18:50:27.9546854Z tests/test_risk_scoring.py::TestRiskScoring::test_single_finding_each_severity PASSED [ 53%]
+2026-10-10T18:50:27.9589535Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_broken_symlinks_handled_gracefully PASSED [ 53%]
+2026-10-10T18:50:27.9603492Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_circular_directory_symlink_terminates PASSED [ 54%]
+2026-10-10T18:50:27.9632843Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_detector_isolation_partial_failure_handled PASSED [ 54%]
+2026-10-10T18:50:27.9655725Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_detector_permission_limited_status_tracking PASSED [ 55%]
+2026-10-10T18:50:27.9667611Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_empty_files_produce_zero_false_positives PASSED [ 55%]
+2026-10-10T18:50:27.9680281Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_fifo_named_pipe_does_not_block_detectors PASSED [ 56%]
+2026-10-10T18:50:27.9692078Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_huge_file_rejection_prevents_dos PASSED [ 56%]
+2026-10-10T18:50:27.9714762Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_invalid_cli_arguments PASSED [ 57%]
+2026-10-10T18:50:27.9726724Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_json_serialization_handles_special_characters PASSED [ 57%]
+2026-10-10T18:50:27.9776374Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_malformed_syntax_across_detectors PASSED [ 58%]
+2026-10-10T18:50:27.9826201Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_safety_zero_command_execution PASSED [ 59%]
+2026-10-10T18:50:28.0933618Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_safety_zero_external_network_activity PASSED [ 59%]
+2026-10-10T18:50:28.0962365Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_safety_zero_filesystem_or_state_modifications PASSED [ 60%]
+2026-10-10T18:50:28.0982230Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_unexpected_filesystem_structures PASSED [ 60%]
+2026-10-10T18:50:28.1027132Z tests/test_safety_and_hardening.py::TestSecurityAndHardening::test_unusual_unicode_and_emoji_filenames PASSED [ 61%]
+2026-10-10T18:50:28.1049062Z tests/test_shell_detector.py::TestShellDetector::test_base64_decode_payload PASSED [ 61%]
+2026-10-10T18:50:28.1070207Z tests/test_shell_detector.py::TestShellDetector::test_binary_executable_in_profile_d PASSED [ 62%]
+2026-10-10T18:50:28.1089293Z tests/test_shell_detector.py::TestShellDetector::test_broken_symlink_in_profile_d PASSED [ 62%]
+2026-10-10T18:50:28.1107959Z tests/test_shell_detector.py::TestShellDetector::test_empty_system_returns_empty_collection PASSED [ 63%]
+2026-10-10T18:50:28.1128805Z tests/test_shell_detector.py::TestShellDetector::test_hidden_directory_execution PASSED [ 63%]
+2026-10-10T18:50:28.1149476Z tests/test_shell_detector.py::TestShellDetector::test_hijacked_sudo_alias PASSED [ 64%]
+2026-10-10T18:50:28.1170562Z tests/test_shell_detector.py::TestShellDetector::test_inline_interpreter_execution PASSED [ 65%]
+2026-10-10T18:50:28.1191298Z tests/test_shell_detector.py::TestShellDetector::test_insecure_world_writable_startup_file PASSED [ 65%]
+2026-10-10T18:50:28.1206880Z tests/test_shell_detector.py::TestShellDetector::test_missing_directories_do_not_crash PASSED [ 66%]
+2026-10-10T18:50:28.1232881Z tests/test_shell_detector.py::TestShellDetector::test_normal_startup_configuration_produces_zero_findings PASSED [ 66%]
+2026-10-10T18:50:28.1255819Z tests/test_shell_detector.py::TestShellDetector::test_permission_denied_handling PASSED [ 67%]
+2026-10-10T18:50:28.1277021Z tests/test_shell_detector.py::TestShellDetector::test_read_only_safety_preserves_files PASSED [ 67%]
+2026-10-10T18:50:28.1349481Z tests/test_shell_detector.py::TestShellDetector::test_real_system_scan_does_not_crash PASSED [ 68%]
+2026-10-10T18:50:28.1370432Z tests/test_shell_detector.py::TestShellDetector::test_suspicious_download_pipe_indicator PASSED [ 68%]
+2026-10-10T18:50:28.1391614Z tests/test_shell_detector.py::TestShellDetector::test_suspicious_netcat_utility PASSED [ 69%]
+2026-10-10T18:50:28.1412277Z tests/test_shell_detector.py::TestShellDetector::test_suspicious_network_socket_reverse_shell PASSED [ 69%]
+2026-10-10T18:50:28.1434924Z tests/test_shell_detector.py::TestShellDetector::test_suspicious_standalone_wget_indicator PASSED [ 70%]
+2026-10-10T18:50:28.1457368Z tests/test_shell_detector.py::TestShellDetector::test_temporary_directory_execution PASSED [ 71%]
+2026-10-10T18:50:28.1481473Z tests/test_ssh_detector.py::TestSSHDetector::test_broken_symlink_in_ssh_directory PASSED [ 71%]
+2026-10-10T18:50:28.1503808Z tests/test_ssh_detector.py::TestSSHDetector::test_empty_system_returns_empty_collection PASSED [ 72%]
+2026-10-10T18:50:28.1529521Z tests/test_ssh_detector.py::TestSSHDetector::test_generic_forced_command PASSED [ 72%]
+2026-10-10T18:50:28.1554690Z tests/test_ssh_detector.py::TestSSHDetector::test_insecure_sshd_config_options PASSED [ 73%]
+2026-10-10T18:50:28.1579360Z tests/test_ssh_detector.py::TestSSHDetector::test_insecure_world_writable_permissions PASSED [ 73%]
+2026-10-10T18:50:28.1604146Z tests/test_ssh_detector.py::TestSSHDetector::test_malformed_authorized_keys_entry PASSED [ 74%]
+2026-10-10T18:50:28.1625117Z tests/test_ssh_detector.py::TestSSHDetector::test_missing_directories_do_not_crash PASSED [ 74%]
+2026-10-10T18:50:28.1649399Z tests/test_ssh_detector.py::TestSSHDetector::test_multiple_valid_authorized_keys PASSED [ 75%]
+2026-10-10T18:50:28.1677155Z tests/test_ssh_detector.py::TestSSHDetector::test_permission_denied_handling PASSED [ 75%]
+2026-10-10T18:50:28.1701852Z tests/test_ssh_detector.py::TestSSHDetector::test_private_key_material_shielding_and_detection PASSED [ 76%]
+2026-10-10T18:50:28.1727286Z tests/test_ssh_detector.py::TestSSHDetector::test_read_only_safety_preserves_files PASSED [ 77%]
+2026-10-10T18:50:28.1751446Z tests/test_ssh_detector.py::TestSSHDetector::test_real_system_scan_does_not_crash PASSED [ 77%]
+2026-10-10T18:50:28.1775359Z tests/test_ssh_detector.py::TestSSHDetector::test_root_authorized_keys_observation PASSED [ 78%]
+2026-10-10T18:50:28.1800362Z tests/test_ssh_detector.py::TestSSHDetector::test_service_account_with_authorized_keys PASSED [ 78%]
+2026-10-10T18:50:28.1825221Z tests/test_ssh_detector.py::TestSSHDetector::test_suspicious_download_pipe_forced_command PASSED [ 79%]
+2026-10-10T18:50:28.1849442Z tests/test_ssh_detector.py::TestSSHDetector::test_suspicious_forced_command_with_indicators PASSED [ 79%]
+2026-10-10T18:50:28.1874321Z tests/test_ssh_detector.py::TestSSHDetector::test_valid_standard_user_authorized_key PASSED [ 80%]
+2026-10-10T18:50:28.1893370Z tests/test_suid_detector.py::TestSuidDetector::test_empty_system_returns_empty_collection PASSED [ 80%]
+2026-10-10T18:50:28.1915610Z tests/test_suid_detector.py::TestSuidDetector::test_insecure_group_writable_suid_binary PASSED [ 81%]
+2026-10-10T18:50:28.1936361Z tests/test_suid_detector.py::TestSuidDetector::test_insecure_world_writable_suid_binary PASSED [ 81%]
+2026-10-10T18:50:28.1953916Z tests/test_suid_detector.py::TestSuidDetector::test_missing_directories_do_not_crash PASSED [ 82%]
+2026-10-10T18:50:28.1972947Z tests/test_suid_detector.py::TestSuidDetector::test_normal_non_suid_binary_is_ignored PASSED [ 83%]
+2026-10-10T18:50:28.1994300Z tests/test_suid_detector.py::TestSuidDetector::test_permission_denied_directory_handling PASSED [ 83%]
+2026-10-10T18:50:28.2015390Z tests/test_suid_detector.py::TestSuidDetector::test_read_only_safety_preserves_files PASSED [ 84%]
+2026-10-10T18:50:59.6489616Z tests/test_suid_detector.py::TestSuidDetector::test_real_system_scan_does_not_crash PASSED [ 84%]
+2026-10-10T18:50:59.6511467Z tests/test_suid_detector.py::TestSuidDetector::test_sgid_detection_works PASSED [ 85%]
+2026-10-10T18:50:59.6532579Z tests/test_suid_detector.py::TestSuidDetector::test_standard_system_suid_binary PASSED [ 85%]
+2026-10-10T18:50:59.6553042Z tests/test_suid_detector.py::TestSuidDetector::test_suid_binary_in_tmp_directory PASSED [ 86%]
+2026-10-10T18:50:59.6573900Z tests/test_suid_detector.py::TestSuidDetector::test_suid_binary_in_user_home_directory PASSED [ 86%]
+2026-10-10T18:50:59.6594472Z tests/test_suid_detector.py::TestSuidDetector::test_suid_in_non_standard_location PASSED [ 87%]
+2026-10-10T18:50:59.6615353Z tests/test_suid_detector.py::TestSuidDetector::test_suid_shell_or_interpreter PASSED [ 87%]
+2026-10-10T18:50:59.6637220Z tests/test_suid_detector.py::TestSuidDetector::test_symlinks_are_skipped PASSED [ 88%]
+2026-10-10T18:50:59.6658747Z tests/test_systemd_detector.py::TestSystemdDetector::test_broken_symlink_in_wants_directory PASSED [ 89%]
+2026-10-10T18:50:59.6680902Z tests/test_systemd_detector.py::TestSystemdDetector::test_drop_in_override_configuration PASSED [ 89%]
+2026-10-10T18:50:59.6699320Z tests/test_systemd_detector.py::TestSystemdDetector::test_empty_system_returns_empty_collection PASSED [ 90%]
+2026-10-10T18:50:59.6720184Z tests/test_systemd_detector.py::TestSystemdDetector::test_executable_in_hidden_directory PASSED [ 90%]
+2026-10-10T18:50:59.6741933Z tests/test_systemd_detector.py::TestSystemdDetector::test_hidden_unit_file PASSED [ 91%]
+2026-10-10T18:50:59.6765155Z tests/test_systemd_detector.py::TestSystemdDetector::test_inline_interpreter_execution PASSED [ 91%]
+2026-10-10T18:50:59.6790823Z tests/test_systemd_detector.py::TestSystemdDetector::test_insecure_world_writable_unit_permissions PASSED [ 92%]
+2026-10-10T18:50:59.6808275Z tests/test_systemd_detector.py::TestSystemdDetector::test_line_continuation_support PASSED [ 92%]
+2026-10-10T18:50:59.6829460Z tests/test_systemd_detector.py::TestSystemdDetector::test_malformed_unit_directive PASSED [ 93%]
+2026-10-10T18:50:59.6848029Z tests/test_systemd_detector.py::TestSystemdDetector::test_missing_directories_do_not_crash PASSED [ 93%]
+2026-10-10T18:50:59.6869502Z tests/test_systemd_detector.py::TestSystemdDetector::test_normal_legitimate_services_produce_zero_findings PASSED [ 94%]
+2026-10-10T18:50:59.6891034Z tests/test_systemd_detector.py::TestSystemdDetector::test_permission_denied_directory_handling PASSED [ 95%]
+2026-10-10T18:50:59.6913263Z tests/test_systemd_detector.py::TestSystemdDetector::test_read_only_safety_preserves_files PASSED [ 95%]
+2026-10-10T18:50:59.7917927Z tests/test_systemd_detector.py::TestSystemdDetector::test_real_system_scan_does_not_crash PASSED [ 96%]
+2026-10-10T18:50:59.7940812Z tests/test_systemd_detector.py::TestSystemdDetector::test_suspicious_download_pipe_indicator PASSED [ 96%]
+2026-10-10T18:50:59.7962737Z tests/test_systemd_detector.py::TestSystemdDetector::test_suspicious_execstartpre_and_execstartpost PASSED [ 97%]
+2026-10-10T18:50:59.7983690Z tests/test_systemd_detector.py::TestSystemdDetector::test_suspicious_netcat_utility PASSED [ 97%]
+2026-10-10T18:50:59.8004802Z tests/test_systemd_detector.py::TestSystemdDetector::test_suspicious_network_socket_reverse_shell PASSED [ 98%]
+2026-10-10T18:50:59.8025845Z tests/test_systemd_detector.py::TestSystemdDetector::test_suspicious_temp_directory_execstart PASSED [ 98%]
+2026-10-10T18:50:59.8047227Z tests/test_systemd_detector.py::TestSystemdDetector::test_system_service_executing_from_home PASSED [ 99%]
+2026-10-10T18:50:59.8310286Z tests/test_systemd_detector.py::TestSystemdDetector::test_user_unit_service_auditing PASSED [100%]
+2026-10-10T18:50:59.8311016Z 
+2026-10-10T18:50:59.8311259Z ============================= 183 passed in 32.49s =============================
+2026-10-10T18:50:59.8591828Z ##[group]Run python -m persisthunt --version
+2026-10-10T18:50:59.8592213Z [36;1mpython -m persisthunt --version[0m
+2026-10-10T18:50:59.8592712Z [36;1mpython -m persisthunt scan --help[0m
+2026-10-10T18:50:59.8593127Z [36;1mpython -m persisthunt scan --category cron,systemd --json --quiet[0m
+2026-10-10T18:50:59.8657243Z shell: /usr/bin/bash -e {0}
+2026-10-10T18:50:59.8657502Z env:
+2026-10-10T18:50:59.8657780Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-10-10T18:50:59.8658245Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+2026-10-10T18:50:59.8658694Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-10-10T18:50:59.8659090Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-10-10T18:50:59.8659491Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-10-10T18:50:59.8660142Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+2026-10-10T18:50:59.8660525Z ##[endgroup]
+2026-10-10T18:50:59.9316965Z PersistHunt 0.1.0
+2026-10-10T18:50:59.9963910Z usage: persisthunt scan [-h] [--json] [-c CATEGORIES]
+2026-10-10T18:50:59.9964823Z                         [-s {info,low,medium,high,critical}] [-o FILE] [-q]
+2026-10-10T18:50:59.9965538Z                         [--exit-zero] [--root-prefix ROOT_PREFIX]
+2026-10-10T18:50:59.9965850Z 
+2026-10-10T18:50:59.9966040Z Scan the system using configured persistence detectors.
+2026-10-10T18:50:59.9966432Z 
+2026-10-10T18:50:59.9966557Z optional arguments:
+2026-10-10T18:50:59.9966901Z   -h, --help            show this help message and exit
+2026-10-10T18:50:59.9967416Z   --json                Output scan results in machine-readable JSON format
+2026-10-10T18:50:59.9967910Z   -c CATEGORIES, --category CATEGORIES
+2026-10-10T18:50:59.9968338Z                         Filter detector execution by category (e.g. cron,
+2026-10-10T18:50:59.9968868Z                         systemd, ssh, shell, suid, process, account). Can be
+2026-10-10T18:50:59.9969421Z                         specified multiple times or as comma-separated values.
+2026-10-10T18:50:59.9970329Z   -s {info,low,medium,high,critical}, --severity {info,low,medium,high,critical}
+2026-10-10T18:50:59.9970966Z                         Filter findings by minimum severity threshold (case-
+2026-10-10T18:50:59.9971417Z                         insensitive)
+2026-10-10T18:50:59.9971759Z   -o FILE, --output FILE
+2026-10-10T18:50:59.9972134Z                         Save report to file (.json or .html based on file
+2026-10-10T18:50:59.9972562Z                         extension)
+2026-10-10T18:50:59.9972965Z   -q, --quiet           Suppress scan progress messages on stderr
+2026-10-10T18:50:59.9973514Z   --exit-zero           Return exit code 0 even if HIGH or CRITICAL threats
+2026-10-10T18:50:59.9973981Z                         are detected
+2026-10-10T18:50:59.9974310Z   --root-prefix ROOT_PREFIX
+2026-10-10T18:50:59.9974703Z                         Target filesystem root prefix for offline image or
+2026-10-10T18:50:59.9975163Z                         container inspection
+2026-10-10T18:51:00.1684248Z {
+2026-10-10T18:51:00.1684692Z   "tool": "PersistHunt",
+2026-10-10T18:51:00.1685137Z   "version": "0.1.0",
+2026-10-10T18:51:00.1685531Z   "timestamp": "2026-10-10T18:51:00.168011+00:00",
+2026-10-10T18:51:00.1686026Z   "host": "runnervmmprz5",
+2026-10-10T18:51:00.1686382Z   "risk_score": 9.2,
+2026-10-10T18:51:00.1686731Z   "statistics": {
+2026-10-10T18:51:00.1711116Z     "total_findings": 16,
+2026-10-10T18:51:00.1711621Z     "highest_severity": "HIGH",
+2026-10-10T18:51:00.1712057Z     "severity_counts": {
+2026-10-10T18:51:00.1712429Z       "CRITICAL": 0,
+2026-10-10T18:51:00.1712775Z       "HIGH": 1,
+2026-10-10T18:51:00.1713128Z       "MEDIUM": 13,
+2026-10-10T18:51:00.1713486Z       "LOW": 1,
+2026-10-10T18:51:00.1713824Z       "INFO": 1
+2026-10-10T18:51:00.1714155Z     },
+2026-10-10T18:51:00.1714490Z     "category_counts": {
+2026-10-10T18:51:00.1714882Z       "cron": 7,
+2026-10-10T18:51:00.1715233Z       "systemd": 9
+2026-10-10T18:51:00.1716151Z     },
+2026-10-10T18:51:00.1716492Z     "raw_score": 46.0,
+2026-10-10T18:51:00.1716885Z     "detector_status": {
+2026-10-10T18:51:00.1717515Z       "cron": "permission-limited",
+2026-10-10T18:51:00.1717997Z       "systemd": "successful"
+2026-10-10T18:51:00.1718391Z     }
+2026-10-10T18:51:00.1718663Z   },
+2026-10-10T18:51:00.1718953Z   "findings": [
+2026-10-10T18:51:00.1719270Z     {
+2026-10-10T18:51:00.1719589Z       "id": "PH-CRON-005",
+2026-10-10T18:51:00.1720404Z       "category": "cron",
+2026-10-10T18:51:00.1720829Z       "severity": "HIGH",
+2026-10-10T18:51:00.1721290Z       "title": "Encoded payload decoding in cron entry",
+2026-10-10T18:51:00.1722432Z       "description": "Command decodes base64 data, an indicator commonly used to obfuscate commands, scripts, or reverse shells.",
+2026-10-10T18:51:00.1723494Z       "evidence": "echo \"$PGP_KEY_DATA\" | base64 -d >\"$GPG_FILE.$$.tmp\"",
+2026-10-10T18:51:00.1724241Z       "location": "/etc/cron.daily/microsoft-edge:81",
+2026-10-10T18:51:00.1725192Z       "recommendation": "Decode and review the base64 content to ensure it does not execute unauthorized commands."
+2026-10-10T18:51:00.1726060Z     },
+2026-10-10T18:51:00.1726363Z     {
+2026-10-10T18:51:00.1726701Z       "id": "PH-CRON-006",
+2026-10-10T18:51:00.1727123Z       "category": "cron",
+2026-10-10T18:51:00.1727529Z       "severity": "MEDIUM",
+2026-10-10T18:51:00.1728055Z       "title": "Suspicious hidden file in cron directory",
+2026-10-10T18:51:00.1729425Z       "description": "Hidden file '.placeholder' detected in cron directory /etc/cron.d. Cron typically ignores dotfiles, but hidden files in system cron directories are anomalous.",
+2026-10-10T18:51:00.1730891Z       "evidence": "Filename: .placeholder",
+2026-10-10T18:51:00.1731410Z       "location": "/etc/cron.d/.placeholder",
+2026-10-10T18:51:00.1732110Z       "recommendation": "Investigate the origin and purpose of this hidden file."
+2026-10-10T18:51:00.1732800Z     },
+2026-10-10T18:51:00.1733087Z     {
+2026-10-10T18:51:00.1733412Z       "id": "PH-CRON-006",
+2026-10-10T18:51:00.1733814Z       "category": "cron",
+2026-10-10T18:51:00.1734195Z       "severity": "MEDIUM",
+2026-10-10T18:51:00.1734683Z       "title": "Suspicious hidden file in cron directory",
+2026-10-10T18:51:00.1735629Z       "description": "Hidden file '.placeholder' detected in cron directory /etc/cron.hourly.",
+2026-10-10T18:51:00.1736440Z       "evidence": "Filename: .placeholder",
+2026-10-10T18:51:00.1736963Z       "location": "/etc/cron.hourly/.placeholder",
+2026-10-10T18:51:00.1737697Z       "recommendation": "Investigate the origin and purpose of this hidden file."
+2026-10-10T18:51:00.1738498Z     },
+2026-10-10T18:51:00.1738793Z     {
+2026-10-10T18:51:00.1739101Z       "id": "PH-CRON-006",
+2026-10-10T18:51:00.1739495Z       "category": "cron",
+2026-10-10T18:51:00.1740749Z       "severity": "MEDIUM",
+2026-10-10T18:51:00.1741237Z       "title": "Suspicious hidden file in cron directory",
+2026-10-10T18:51:00.1742109Z       "description": "Hidden file '.placeholder' detected in cron directory /etc/cron.daily.",
+2026-10-10T18:51:00.1742929Z       "evidence": "Filename: .placeholder",
+2026-10-10T18:51:00.1743465Z       "location": "/etc/cron.daily/.placeholder",
+2026-10-10T18:51:00.1744192Z       "recommendation": "Investigate the origin and purpose of this hidden file."
+2026-10-10T18:51:00.1744870Z     },
+2026-10-10T18:51:00.1745154Z     {
+2026-10-10T18:51:00.1745459Z       "id": "PH-CRON-006",
+2026-10-10T18:51:00.1745835Z       "category": "cron",
+2026-10-10T18:51:00.1746273Z       "severity": "MEDIUM",
+2026-10-10T18:51:00.1746739Z       "title": "Suspicious hidden file in cron directory",
+2026-10-10T18:51:00.1747570Z       "description": "Hidden file '.placeholder' detected in cron directory /etc/cron.weekly.",
+2026-10-10T18:51:00.1748394Z       "evidence": "Filename: .placeholder",
+2026-10-10T18:51:00.1748935Z       "location": "/etc/cron.weekly/.placeholder",
+2026-10-10T18:51:00.1749670Z       "recommendation": "Investigate the origin and purpose of this hidden file."
+2026-10-10T18:51:00.1751020Z     },
+2026-10-10T18:51:00.1751342Z     {
+2026-10-10T18:51:00.1751675Z       "id": "PH-CRON-006",
+2026-10-10T18:51:00.1752258Z       "category": "cron",
+2026-10-10T18:51:00.1752662Z       "severity": "MEDIUM",
+2026-10-10T18:51:00.1753146Z       "title": "Suspicious hidden file in cron directory",
+2026-10-10T18:51:00.1753972Z       "description": "Hidden file '.placeholder' detected in cron directory /etc/cron.monthly.",
+2026-10-10T18:51:00.1754806Z       "evidence": "Filename: .placeholder",
+2026-10-10T18:51:00.1755345Z       "location": "/etc/cron.monthly/.placeholder",
+2026-10-10T18:51:00.1756092Z       "recommendation": "Investigate the origin and purpose of this hidden file."
+2026-10-10T18:51:00.1756791Z     },
+2026-10-10T18:51:00.1757095Z     {
+2026-10-10T18:51:00.1757426Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:51:00.1757847Z       "category": "systemd",
+2026-10-10T18:51:00.1758253Z       "severity": "MEDIUM",
+2026-10-10T18:51:00.1758813Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:51:00.1760078Z       "description": "ExecStartPre uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:51:00.1761287Z       "evidence": "/bin/sh -c '[ -s /boot/grub/grubenv ] || rm -f /boot/grub/grubenv; mkdir -p /boot/grub'",
+2026-10-10T18:51:00.1762221Z       "location": "/etc/systemd/system/suspend.target.wants/grub-common.service:9",
+2026-10-10T18:51:00.1763223Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:51:00.1764013Z     },
+2026-10-10T18:51:00.1764305Z     {
+2026-10-10T18:51:00.1764628Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:51:00.1765034Z       "category": "systemd",
+2026-10-10T18:51:00.1765421Z       "severity": "MEDIUM",
+2026-10-10T18:51:00.1765944Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:51:00.1767003Z       "description": "ExecStartPost uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:51:00.1768967Z       "evidence": "/bin/sh -c 'if grub-editenv /boot/grub/grubenv list | grep -q initrdless_boot_fallback_triggered=1; then echo \"grub: GRUB_FORCE_PARTUUID set, initrdless boot paniced, fallback triggered.\"; fi'",
+2026-10-10T18:51:00.1771033Z       "location": "/etc/systemd/system/suspend.target.wants/grub-common.service:11",
+2026-10-10T18:51:00.1772130Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:51:00.1772929Z     },
+2026-10-10T18:51:00.1773218Z     {
+2026-10-10T18:51:00.1773540Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:51:00.1773961Z       "category": "systemd",
+2026-10-10T18:51:00.1774365Z       "severity": "MEDIUM",
+2026-10-10T18:51:00.1774917Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:51:00.1775924Z       "description": "ExecStop uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:51:00.1777014Z       "evidence": "/bin/sh -c '/usr/bin/podman $LOGGING stop $(/usr/bin/podman container ls --filter restart-policy=always -q)'",
+2026-10-10T18:51:00.1777710Z       "location": "/etc/systemd/system/default.target.wants/podman-restart.service:13",
+2026-10-10T18:51:00.1778350Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:51:00.1778895Z     },
+2026-10-10T18:51:00.1779184Z     {
+2026-10-10T18:51:00.1779526Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:51:00.1780146Z       "category": "systemd",
+2026-10-10T18:51:00.1780528Z       "severity": "MEDIUM",
+2026-10-10T18:51:00.1781027Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:51:00.1782041Z       "description": "ExecStart uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:51:00.1783103Z       "evidence": "/bin/sh -c \"echo add > /sys/class/fc/fc_udev_device/nvme_discovery\"",
+2026-10-10T18:51:00.1784462Z       "location": "/etc/systemd/system/default.target.wants/nvmefc-boot-connections.service:10",
+2026-10-10T18:51:00.1785896Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:51:00.1786721Z     },
+2026-10-10T18:51:00.1787010Z     {
+2026-10-10T18:51:00.1787270Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:51:00.1787530Z       "category": "systemd",
+2026-10-10T18:51:00.1787773Z       "severity": "MEDIUM",
+2026-10-10T18:51:00.1788085Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:51:00.1788695Z       "description": "ExecStart uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:51:00.1789378Z       "evidence": "sh -c '[ \"$AUTOSCAN\" != \"true\" ] || /sbin/mdadm --monitor --oneshot --scan'",
+2026-10-10T18:51:00.1790316Z       "location": "/usr/lib/systemd/system/mdmonitor-oneshot.service:14",
+2026-10-10T18:51:00.1791177Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:51:00.1791624Z     },
+2026-10-10T18:51:00.1791799Z     {
+2026-10-10T18:51:00.1791992Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:51:00.1792244Z       "category": "systemd",
+2026-10-10T18:51:00.1792477Z       "severity": "MEDIUM",
+2026-10-10T18:51:00.1792791Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:51:00.1793383Z       "description": "ExecStart uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:51:00.1794147Z       "evidence": "/bin/sh -c \"/usr/sbin/nvme connect-all --context=autoconnect --quiet `/bin/echo -e '${CONNECT_ARGS}'`\"",
+2026-10-10T18:51:00.1794750Z       "location": "/usr/lib/systemd/system/nvmf-connect@.service:16",
+2026-10-10T18:51:00.1795282Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:51:00.1795726Z     },
+2026-10-10T18:51:00.1795903Z     {
+2026-10-10T18:51:00.1796098Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:51:00.1796339Z       "category": "systemd",
+2026-10-10T18:51:00.1796572Z       "severity": "MEDIUM",
+2026-10-10T18:51:00.1796886Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:51:00.1797464Z       "description": "ExecStart uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:51:00.1798214Z       "evidence": "/bin/bash -c 'read args <&3; echo \"args=$args\"; exec /usr/bin/cloud-init devel hotplug-hook $args; exit 0'",
+2026-10-10T18:51:00.1798837Z       "location": "/usr/lib/systemd/system/cloud-init-hotplugd.service:23",
+2026-10-10T18:51:00.1799403Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:51:00.1800104Z     },
+2026-10-10T18:51:00.1800287Z     {
+2026-10-10T18:51:00.1800482Z       "id": "PH-SYSTEMD-005",
+2026-10-10T18:51:00.1800731Z       "category": "systemd",
+2026-10-10T18:51:00.1800969Z       "severity": "MEDIUM",
+2026-10-10T18:51:00.1801285Z       "title": "Inline interpreter command execution in systemd unit",
+2026-10-10T18:51:00.1801877Z       "description": "ExecStop uses inline script execution (-c or -e) to run code directly inside the unit file.",
+2026-10-10T18:51:00.1802657Z       "evidence": "/bin/sh -c '/usr/bin/podman $LOGGING stop $(/usr/bin/podman container ls --filter restart-policy=always -q)'",
+2026-10-10T18:51:00.1803285Z       "location": "/usr/lib/systemd/user/podman-restart.service:13",
+2026-10-10T18:51:00.1803816Z       "recommendation": "Inspect the inline code and migrate complex logic to an audited script file."
+2026-10-10T18:51:00.1804259Z     },
+2026-10-10T18:51:00.1804431Z     {
+2026-10-10T18:51:00.1804625Z       "id": "PH-SYSTEMD-091",
+2026-10-10T18:51:00.1804869Z       "category": "systemd",
+2026-10-10T18:51:00.1805103Z       "severity": "LOW",
+2026-10-10T18:51:00.1805362Z       "title": "Broken symlink in systemd directory",
+2026-10-10T18:51:00.1806112Z       "description": "Symlink at /etc/systemd/system/multi-user.target.wants/apport.service points to non-existent target.",
+2026-10-10T18:51:00.1806944Z       "evidence": "Symlink target: /usr/lib/systemd/system/apport.service",
+2026-10-10T18:51:00.1807433Z       "location": "/etc/systemd/system/multi-user.target.wants/apport.service",
+2026-10-10T18:51:00.1807992Z       "recommendation": "Verify why the target unit was removed and clean up the dangling symlink."
+2026-10-10T18:51:00.1808425Z     },
+2026-10-10T18:51:00.1808596Z     {
+2026-10-10T18:51:00.1808781Z       "id": "PH-CRON-090",
+2026-10-10T18:51:00.1809010Z       "category": "cron",
+2026-10-10T18:51:00.1809230Z       "severity": "INFO",
+2026-10-10T18:51:00.1809524Z       "title": "Unreadable user crontab spool (permission denied)",
+2026-10-10T18:51:00.1810574Z       "description": "Permission was denied when accessing user crontab directory at /var/spool/cron/crontabs. Inspecting user crontabs typically requires elevated privileges.",
+2026-10-10T18:51:00.1811404Z       "evidence": "[Errno 13] Permission denied: '/var/spool/cron/crontabs'",
+2026-10-10T18:51:00.1811797Z       "location": "/var/spool/cron/crontabs",
+2026-10-10T18:51:00.1812330Z       "recommendation": "Run PersistHunt with elevated permissions (e.g. root) to audit restricted user crontabs."
+2026-10-10T18:51:00.1812825Z     }
+2026-10-10T18:51:00.1812992Z   ],
+2026-10-10T18:51:00.1813173Z   "detector_status": {
+2026-10-10T18:51:00.1813381Z     "cron": {
+2026-10-10T18:51:00.1813591Z       "status": "permission-limited",
+2026-10-10T18:51:00.1813857Z       "findings_count": 7,
+2026-10-10T18:51:00.1814086Z       "error": null
+2026-10-10T18:51:00.1814275Z     },
+2026-10-10T18:51:00.1814448Z     "systemd": {
+2026-10-10T18:51:00.1814650Z       "status": "successful",
+2026-10-10T18:51:00.1814886Z       "findings_count": 9,
+2026-10-10T18:51:00.1815103Z       "error": null
+2026-10-10T18:51:00.1815291Z     }
+2026-10-10T18:51:00.1815459Z   }
+2026-10-10T18:51:00.1815633Z }
+2026-10-10T18:51:00.1824708Z ##[error]Process completed with exit code 2.
+2026-10-10T18:51:00.1966311Z Post job cleanup.
+2026-10-10T18:51:00.2826095Z [command]/usr/bin/git version
+2026-10-10T18:51:00.2870841Z git version 2.55.0
+2026-10-10T18:51:00.2913969Z Temporarily overriding HOME='/home/runner/work/_temp/f2517a43-2ea0-4a8b-a855-89624f87e167' before making global git config changes
+2026-10-10T18:51:00.2915149Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-10T18:51:00.2920901Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/persistHunt/persistHunt
+2026-10-10T18:51:00.2961276Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-10T18:51:00.2995140Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-10T18:51:00.3262599Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-10T18:51:00.3291347Z http.https://github.com/.extraheader
+2026-10-10T18:51:00.3311789Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-10T18:51:00.3345336Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-10T18:51:00.3602968Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-10T18:51:00.3642797Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-10T18:51:00.4022804Z Cleaning up orphan processes
+2026-10-10T18:51:00.4311874Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

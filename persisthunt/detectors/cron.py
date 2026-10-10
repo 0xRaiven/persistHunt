@@ -84,9 +84,9 @@ class CronDetector(BaseDetector):
         p = Path(path)
         if self.root_prefix is not None:
             try:
-                if p.is_relative_to(self.root_prefix):
-                    return p
-            except (ValueError, AttributeError):
+                p.relative_to(self.root_prefix)
+                return p
+            except ValueError:
                 pass
             rel_path = str(p).lstrip("/")
             return self.root_prefix / rel_path

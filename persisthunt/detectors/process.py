@@ -108,6 +108,14 @@ class ProcessDetector(BaseDetector):
             sanitized = pattern.sub(repl, sanitized)
         return sanitized
 
+    @staticmethod
+    def _strip_deleted_suffix(val: str) -> str:
+        """Strip ' (deleted)' suffix from executable path (compatible with Python 3.8+)."""
+        suffix = " (deleted)"
+        if val.endswith(suffix):
+            return val[:-len(suffix)]
+        return val
+
     def scan(self) -> FindingCollection:
         """Perform read-only process persistence audit."""
         collection = FindingCollection()
@@ -253,7 +261,7 @@ class ProcessDetector(BaseDetector):
         # 2. Execution from temporary or staging directories (/tmp, /var/tmp, /dev/shm)
         is_temp_exe = False
         if proc.exe:
-            clean_exe = proc.exe.removesuffix(" (deleted)")
+            clean_exe = self._strip_deleted_suffix(proc.exe)
             is_temp_exe = any(clean_exe.startswith(td) for td in self.TEMP_DIRS)
 
         is_temp_cmd = any(td in clean_cmdline for td in self.TEMP_DIRS)
@@ -276,7 +284,7 @@ class ProcessDetector(BaseDetector):
 
         # 3. Execution from hidden directory path
         if proc.exe:
-            clean_exe = proc.exe.removesuffix(" (deleted)")
+            clean_exe = self._strip_deleted_suffix(proc.exe)
             # Check for hidden directories in path (e.g. /home/user/.hidden/tool)
             path_parts = Path(clean_exe).parts
             # Look for parts starting with '.' that are not '.' or '..'
@@ -302,7 +310,7 @@ class ProcessDetector(BaseDetector):
             parent_comm_lower = parent.comm.lower()
             parent_name = parent_comm_lower
             if parent.exe:
-                parent_name = Path(parent.exe.removesuffix(" (deleted)")).name.lower()
+                parent_name = Path(self._strip_deleted_suffix(parent.exe)).name.lower()
 
             # Check if parent is a server daemon and child is an interactive shell
             proc_comm_lower = proc.comm.lower()
