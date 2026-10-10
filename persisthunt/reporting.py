@@ -127,6 +127,11 @@ class ScanReport:
 
         return "\n".join(lines)
 
+    def to_tui(self, use_color: Optional[bool] = None, show_findings: bool = True) -> str:
+        """Render a security-oriented modern terminal user interface dashboard."""
+        from persisthunt.tui import render_tui_dashboard
+        return render_tui_dashboard(self, use_color=use_color, show_findings=show_findings)
+
     def to_html(self) -> str:
         """Generate clean, self-contained, responsive HTML report without external dependencies."""
         sev_counts = self.statistics.get("severity_counts", {})

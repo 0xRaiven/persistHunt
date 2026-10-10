@@ -22,6 +22,10 @@ from persisthunt.reporting import (
     generate_report,
     TOOL_VERSION,
 )
+from persisthunt.tui import (
+    render_tui_dashboard,
+    launch_interactive_tui,
+)
 
 from persisthunt.cli import main
 
@@ -47,8 +51,6 @@ __all__ = [
     "ScanReport",
     "Reporter",
     "generate_report",
+    "render_tui_dashboard",
+    "launch_interactive_tui",
 ]
-
-
-
-

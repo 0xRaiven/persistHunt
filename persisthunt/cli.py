@@ -103,6 +103,63 @@ def create_parser() -> argparse.ArgumentParser:
         default=None,
         help="Target filesystem root prefix for offline image or container inspection",
     )
+    scan_parser.add_argument(
+        "-i", "--interactive", "--tui",
+        action="store_true",
+        dest="tui",
+        help="Launch interactive security TUI browser console",
+    )
+    scan_parser.add_argument(
+        "--plain",
+        action="store_true",
+        help="Output plain unformatted terminal text",
+    )
+    scan_parser.add_argument(
+        "--no-color",
+        action="store_true",
+        help="Disable ANSI color output in terminal dashboard",
+    )
+
+    # Command: persisthunt tui
+    tui_parser = subparsers.add_parser(
+        "tui",
+        help="Launch interactive security TUI browser console",
+        description="Execute persistence audit and launch interactive full-screen curses security browser.",
+    )
+    tui_parser.add_argument(
+        "-c", "--category",
+        action="append",
+        dest="categories",
+        help="Filter detector execution by category",
+    )
+    tui_parser.add_argument(
+        "-s", "--severity",
+        type=str,
+        choices=["info", "low", "medium", "high", "critical"],
+        help="Filter findings by minimum severity threshold",
+    )
+    tui_parser.add_argument(
+        "-o", "--output",
+        type=str,
+        metavar="FILE",
+        help="Save report to file (.json or .html)",
+    )
+    tui_parser.add_argument(
+        "-q", "--quiet",
+        action="store_true",
+        help="Suppress scan progress messages on stderr",
+    )
+    tui_parser.add_argument(
+        "--exit-zero",
+        action="store_true",
+        help="Return exit code 0 even if HIGH or CRITICAL threats are detected",
+    )
+    tui_parser.add_argument(
+        "--root-prefix",
+        type=str,
+        default=None,
+        help="Target filesystem root prefix for offline image or container inspection",
+    )
 
     # Command: persisthunt version
     subparsers.add_parser(
@@ -211,13 +268,21 @@ def run_scan(args: argparse.Namespace) -> int:
     report = generate_report(filtered_findings, detector_status=detector_statuses)
 
     # 5. Output results
-    if args.json:
+    is_interactive_tui = getattr(args, "tui", False) or getattr(args, "subcommand", "") == "tui"
+    if is_interactive_tui:
+        from persisthunt.tui import launch_interactive_tui
+        launch_interactive_tui(report)
+    elif getattr(args, "json", False):
         # Machine-readable JSON output to stdout
         sys.stdout.write(report.to_json(indent=2) + "\n")
         sys.stdout.flush()
     else:
-        # Human-readable terminal output to stdout
-        sys.stdout.write(report.to_terminal(show_details=True) + "\n")
+        # Security-oriented Terminal UI dashboard to stdout
+        if getattr(args, "plain", False):
+            sys.stdout.write(report.to_terminal(show_details=True) + "\n")
+        else:
+            use_color = False if getattr(args, "no_color", False) else None
+            sys.stdout.write(report.to_tui(use_color=use_color, show_findings=True) + "\n")
         sys.stdout.flush()
 
     # 6. Save to file if --output specified
@@ -266,7 +331,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         sys.stdout.write(f"PersistHunt {__version__}\n")
         return EXIT_SUCCESS
 
-    if args.subcommand == "scan":
+    if args.subcommand in ("scan", "tui"):
         return run_scan(args)
 
     parser.print_help(sys.stderr)
