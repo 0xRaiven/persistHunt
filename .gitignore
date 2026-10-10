@@ -34,3 +34,4 @@ ENV/
 *.log
 local_reports/
 docs/screenshots/*.html
+graphify-out/
