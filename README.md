@@ -9,10 +9,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/0xraiven/persistHunt/actions/workflows/ci.yml"><img src="https://github.com/0xraiven/persistHunt/actions/workflows/ci.yml/badge.svg" alt="CI Status" /></a>
+  <a href="https://github.com/0xraiven/persistHunt/actions/workflows/ci.yml"><img src="https://github.com/0xraiven/persistHunt/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI Status" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" /></a>
   <a href="pyproject.toml"><img src="https://img.shields.io/badge/Python-3.8%20|%203.9%20|%203.10%20|%203.11%20|%203.12%20|%203.13%20|%203.14-blue.svg" alt="Python Versions" /></a>
-  <a href="tests/"><img src="https://img.shields.io/badge/Tests-183%20Passed-success.svg" alt="Automated Test Suite" /></a>
+  <a href="tests/"><img src="https://img.shields.io/badge/Tests-192%20Passed-success.svg" alt="Automated Test Suite" /></a>
   <a href="pyproject.toml"><img src="https://img.shields.io/badge/Dependencies-Zero%20(Stdlib)-brightgreen.svg" alt="Zero Dependencies" /></a>
   <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/Version-v0.1.0-orange.svg" alt="Version" /></a>
 </p>
@@ -148,8 +148,12 @@ persisthunt [-h] [-V] {scan,version} ...
 ### Common Commands
 
 ```bash
-# Full system audit with interactive terminal summary
+# Full system audit with security TUI telemetry dashboard
 persisthunt scan
+
+# Launch interactive full-screen curses security browser
+persisthunt tui
+persisthunt scan --tui
 
 # Emit machine-readable JSON to stdout
 persisthunt scan --json --quiet
@@ -160,6 +164,9 @@ persisthunt scan --category cron,systemd,ssh
 # Filter findings by minimum severity threshold
 persisthunt scan --severity high
 
+# Output plain unformatted text (classic output)
+persisthunt scan --plain
+
 # Export audit findings to standalone HTML or JSON files
 persisthunt scan -o report.html
 persisthunt scan -o report.json
@@ -168,11 +175,14 @@ persisthunt scan -o report.json
 persisthunt scan --root-prefix /mnt/forensic_image
 ```
 
-### Command Options Reference (`persisthunt scan`)
+### Command Options Reference (`persisthunt scan` / `persisthunt tui`)
 
 | Flag | Parameter | Description |
 |---|---|---|
+| `-i`, `--tui`, `--interactive` | — | Launch interactive full-screen curses security browser for findings inspection. |
 | `--json` | — | Output scan results formatted as JSON on standard output (`stdout`). |
+| `--plain` | — | Output plain unstyled terminal text without box-drawing borders. |
+| `--no-color` | — | Disable ANSI color sequences in terminal dashboard output. |
 | `-c`, `--category` | `CATEGORIES` | Comma-separated list of categories to audit (`cron`, `systemd`, `ssh`, `shell`, `suid`, `process`, `account`, or `all`). |
 | `-s`, `--severity` | `SEVERITY` | Minimum severity filter threshold: `info`, `low`, `medium`, `high`, `critical`. |
 | `-o`, `--output` | `FILE` | Write report directly to file (automatically detects format from `.json` or `.html` extension). |
